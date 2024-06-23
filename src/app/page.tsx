@@ -36,7 +36,7 @@ export default function Home() {
       <div className="w-full overflow-hidden hidden lg:block" id="start">
         <MacbookScroll
           title={"Simple and easy to learn."}
-          src="/home/code-snippet1.png"
+          src="/code-snippet1.png"
           showGradient={true}
         />
       </div>
@@ -48,7 +48,7 @@ export default function Home() {
             <p className="text-md ">Our carefully designed curriculum makes learning to code simple and fun. With step-by-step instructions and interactive exercises, kids can learn at easily, building confidence as they go.</p>
           </div>
           <div className="w-7/12">
-            <Image src="/home/mockup1.png" width={600} height={400} alt="mockup" className="rounded-xl" sizes="(max-width: 640px) 100vw, 50vw" />
+            <Image src="/mockup1.png" width={600} height={400} alt="mockup" className="rounded-xl" sizes="(max-width: 640px) 100vw, 50vw" />
           </div>
         </div>
 
@@ -58,7 +58,7 @@ export default function Home() {
             <p className="text-md ">Our carefully designed curriculum makes learning to code simple and fun. With step-by-step instructions and interactive exercises, kids can learn at easily, building confidence as they go.</p>
           </div>
           <div className="w-7/12">
-            <Image src="/home/mockup2.png" width={600} height={400} alt="mockup" className="rounded-xl" sizes="(max-width: 640px) 100vw, 50vw" />
+            <Image src="/mockup2.png" width={600} height={400} alt="mockup" className="rounded-xl" sizes="(max-width: 640px) 100vw, 50vw" />
           </div>
         </div>
 
@@ -107,7 +107,7 @@ export default function Home() {
       <div className="w-full h-[15rem] lg:h-[30rem] bg-gradient-to-t from-black to-main-bg flex justify-center">
         <div className="w-2/3 flex justify-between items-center flex-col lg:flex-row p-6">
           <div className="flex flex-col gap-8 lg:flex-row items-center lg:justify-between">
-            <Image src="/home/logo.svg" width={200} height={100} alt="logo" className="hidden lg:block" />
+            <Image src="/logo.svg" width={200} height={100} alt="logo" className="hidden lg:block" />
 
             <div className="flex flex-col items-center text-white lg:p-8">
               <h1 className="text-xl lg:text-4xl font-bold">Cognitio Learning</h1>
