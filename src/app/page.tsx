@@ -36,7 +36,7 @@ export default function Home() {
       <div className="w-full overflow-hidden hidden lg:block" id="start">
         <MacbookScroll
           title={"Simple and easy to learn."}
-          src="/code-snippet1.png"
+          src="/home/code-snippet1.png"
           showGradient={true}
         />
       </div>
