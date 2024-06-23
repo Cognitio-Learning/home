@@ -47,7 +47,7 @@ export default function Home() {
             <h1 className="text-xl lg:text-3xl font-bold text-white">Interactive Learning</h1>
             <p className="text-md ">Our carefully designed curriculum makes learning to code simple and fun. With step-by-step instructions and interactive exercises, kids can learn at easily, building confidence as they go.</p>
           </div>
-          <Image src="/mockup1.png" width={600} height={400} alt="mockup" className="rounded-xl w-1/2 " />
+          <Image src="/home/mockup1.png" width={600} height={400} alt="mockup" className="rounded-xl w-1/2 " />
         </div>
 
         <div className="flex md:justify-between gap-16 mt-8 items-center flex-col lg:flex-row-reverse">
@@ -55,7 +55,7 @@ export default function Home() {
             <h1 className="text-xl lg:text-3xl font-bold text-white">Hands-on AI Projects</h1>
             <p className="text-md ">Our carefully designed curriculum makes learning to code simple and fun. With step-by-step instructions and interactive exercises, kids can learn at easily, building confidence as they go.</p>
           </div>
-          <Image src="/mockup2.png" width={600} height={400} alt="mockup" className="rounded-xl w-1/2 lg:w-5/12" />
+          <Image src="/home/mockup2.png" width={600} height={400} alt="mockup" className="rounded-xl w-1/2 lg:w-5/12" />
         </div>
 
         <div className="flex md:justify-between gap-16 mt-8 lg:mt-16 items-center lg:flex-row flex-col">
@@ -103,7 +103,7 @@ export default function Home() {
       <div className="w-full h-[15rem] lg:h-[30rem] bg-gradient-to-t from-black to-main-bg flex justify-center">
         <div className="w-2/3 flex justify-between items-center flex-col lg:flex-row p-6">
           <div className="flex flex-col gap-8 lg:flex-row items-center lg:justify-between">
-            <Image src="/logo.svg" width={200} height={100} alt="logo" className="hidden lg:block" />
+            <Image src="/home/logo.svg" width={200} height={100} alt="logo" className="hidden lg:block" />
 
             <div className="flex flex-col items-center text-white lg:p-8">
               <h1 className="text-xl lg:text-4xl font-bold">Cognitio Learning</h1>
