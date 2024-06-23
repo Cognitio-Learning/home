@@ -113,7 +113,7 @@ export default function Home() {
 
           <div className="flex flex-col  text-white p-8 items-center">
             <h1 className="text-xl lg:text-4xl font-bold hidden lg:block">Contact Us</h1>
-            <Link href="mailto:tristangee@gmail.com"><IconMail stroke={2} size={36} className="hover:cursor-pointer" /></Link>
+            <Link href="mailto:contact.cognitiolearning@gmail.com"><IconMail stroke={2} size={36} className="hover:cursor-pointer" /></Link>
           </div>
         </div>
       </div>
