@@ -5,6 +5,9 @@
  */
 const nextConfig = {
     /* config options here */
+    output: 'export',
+    reactStrictMode: true,
+    basePath: '/home'
 }
 
 export default nextConfig
