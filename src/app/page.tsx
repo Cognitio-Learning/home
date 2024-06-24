@@ -1,5 +1,5 @@
-import { MacbookScroll } from "@/components/ui/macbook";
-import { SparklesCore } from "@/components/ui/sparkles";
+import { MacbookScroll } from "@/components/ui/ace/macbook";
+import { SparklesCore } from "@/components/ui/ace/sparkles";
 import { IconAffiliate, IconBook, IconMail, IconRocket } from "@tabler/icons-react";
 import Image from "next/image";
 import Link from "next/link";
@@ -12,7 +12,7 @@ export default function Home() {
           Cognitio Learning
         </h1>
         <p className="text-xl lg:text-2xl font-bold mt-6 relative z-20 text-center">Simplified learning for the next generation.</p>
-        <div className="w-[40rem] h-40 relative">
+        <div className="lg:w-[40rem] h-40 relative">
           {/* Gradients */}
           <div className="absolute inset-x-20 top-0 bg-gradient-to-r from-transparent via-indigo-500 to-transparent h-[2px] w-3/4 blur-sm" />
           <div className="absolute inset-x-20 top-0 bg-gradient-to-r from-transparent via-indigo-500 to-transparent h-px w-3/4" />
@@ -40,32 +40,32 @@ export default function Home() {
           showGradient={true}
         />
       </div>
-      <div className="lg:-mt-[5rem] flex flex-col items-center text-body-text mt-12">
+      <div className="lg:-mt-[5rem] flex flex-col items-center text-body-text mt-12 w-screen">
         <h1 className="text-3xl lg:text-4xl font-bold text-white ">What we offer</h1>
-        <div className="flex md:justify-between gap-16 mt-8 items-center lg:flex-row flex-col">
-          <div className="lg:w-[40rem] w-1/2 md:w-full flex items-center lg:items-start flex-col ">
+        <div className="flex justify-between gap-16 mt-8 items-center lg:flex-row flex-col">
+          <div className="lg:w-[40rem] w-[24rem] md:w-full flex items-center lg:items-start flex-col ">
             <h1 className="text-xl lg:text-3xl font-bold text-white">Interactive Learning</h1>
-            <p className="text-md ">Our carefully designed curriculum makes learning to code simple and fun. With step-by-step instructions and interactive exercises, kids can learn at easily, building confidence as they go.</p>
+            <p className="text-md text-center lg:text-start">Our carefully designed curriculum makes learning to code simple and fun. With step-by-step instructions and interactive exercises, kids can learn at easily, building confidence as they go.</p>
           </div>
-          <div className="w-7/12">
+          <div className="w-3/4 lg:w-7/12 flex lg:justify-end">
             <Image src="/mockup1.png" width={600} height={400} alt="mockup" className="rounded-xl" sizes="(max-width: 640px) 100vw, 50vw" />
           </div>
         </div>
 
         <div className="flex md:justify-between gap-16 mt-8 items-center flex-col lg:flex-row-reverse">
-          <div className="lg:w-[40rem] w-1/2 md:w-full flex items-center lg:items-start flex-col ">
-            <h1 className="text-xl lg:text-3xl font-bold text-white">Hands-on AI Projects</h1>
-            <p className="text-md ">Our carefully designed curriculum makes learning to code simple and fun. With step-by-step instructions and interactive exercises, kids can learn at easily, building confidence as they go.</p>
+          <div className="lg:w-[40rem] w-[24rem] md:w-full flex items-center lg:items-start flex-col ">
+            <h1 className="text-xl lg:text-3xl font-bold text-white ">Hands-on AI Projects</h1>
+            <p className="text-md text-center lg:text-start">Our carefully designed curriculum makes learning to code simple and fun. With step-by-step instructions and interactive exercises, kids can learn at easily, building confidence as they go.</p>
           </div>
-          <div className="w-7/12">
+          <div className="w-3/4 lg:w-7/12">
             <Image src="/mockup2.png" width={600} height={400} alt="mockup" className="rounded-xl" sizes="(max-width: 640px) 100vw, 50vw" />
           </div>
         </div>
 
         <div className="flex md:justify-between gap-16 mt-8 lg:mt-16 items-center lg:flex-row flex-col">
-          <div className="w-[20rem] md:w-[40rem] flex items-center lg:items-start flex-col ">
-            <h1 className="text-xl lg:text-3xl font-bold text-white">Experienced Mentors</h1>
-            <p className="text-md">Our team of experienced mentors is dedicated to guiding students through their coding and AI journey. With personalized support and encouragement, we help everyone reach their full potential</p>
+          <div className="w-[24rem] md:w-[40rem] flex items-center flex-col ">
+            <h1 className="text-xl lg:text-3xl font-bold text-white ">Experienced Mentors</h1>
+            <p className="text-md text-center">Our team of experienced mentors is dedicated to guiding students through their coding and AI journey. With personalized support and encouragement, we help everyone reach their full potential</p>
           </div>
         </div>
 
@@ -75,17 +75,17 @@ export default function Home() {
       <div className="py-32 flex justify-center flex-col items-center w-full mt-20">
         <h1 className="text-3xl lg:text-4xl font-bold text-white pb-8">Why choose us?</h1>
         <div className="flex flex-col lg:flex-row gap-8">
-          <div className="flex flex-col items-center w-[25rem]">
+          <div className="flex flex-col items-center w-[24rem]">
             <IconBook size={100} stroke={1} color="#5e17eb" />
             <h1 className="text-xl lg:text-2xl font-bold text-white mt-4 mb-2">Engaging Curriculum</h1>
             <p className="text-body-text text-center">Our curriculum is designed with young learners in mind, making complex topics simple and exciting. We use kid-friendly and real-world examples to keep kids engaged and motivated.</p>
           </div>
-          <div className="flex flex-col items-center w-[25rem]">
+          <div className="flex flex-col items-center w-[24rem]">
             <IconAffiliate size={100} stroke={1} color="#5e17eb" />
             <h1 className="text-xl lg:text-2xl font-bold text-white mt-4 mb-2">Inclusive and Accessible</h1>
             <p className="text-body-text text-center">Cognitio is committed to making coding and AI education accessible to all children. All courses that we offer are <span className=" text-white">FREE</span> to ensure no one is left behind.</p>
           </div>
-          <div className="flex flex-col items-center w-[25rem]">
+          <div className="flex flex-col items-center w-[24rem]">
             <IconRocket size={100} stroke={1} color="#5e17eb" />
             <h1 className="text-xl lg:text-2xl font-bold text-white mt-4 mb-2">Future-Ready Skills</h1>
             <p className="text-body-text text-center">We prepare kids for the future by teaching them the skills they need to succeed in a technology-driven world. Our programs focus on creativity, critical thinking, and problem-solving. </p>
@@ -104,23 +104,7 @@ export default function Home() {
 
       {/* Footer */}
 
-      <div className="w-full h-[15rem] lg:h-[30rem] bg-gradient-to-t from-black to-main-bg flex justify-center">
-        <div className="w-2/3 flex justify-between items-center flex-col lg:flex-row p-6">
-          <div className="flex flex-col gap-8 lg:flex-row items-center lg:justify-between">
-            <Image src="/logo.svg" width={200} height={100} alt="logo" className="hidden lg:block" />
-
-            <div className="flex flex-col items-center text-white lg:p-8">
-              <h1 className="text-xl lg:text-4xl font-bold">Cognitio Learning</h1>
-              <p className="text-md lg:text-lg text-center">Simplified learning for the next generation.</p>
-            </div>
-          </div>
-
-          <div className="flex flex-col  text-white p-8 items-center">
-            <h1 className="text-xl lg:text-4xl font-bold hidden lg:block">Contact Us</h1>
-            <Link href="mailto:contact.cognitiolearning@gmail.com"><IconMail stroke={2} size={36} className="hover:cursor-pointer" /></Link>
-          </div>
-        </div>
-      </div>
+      
     </main>
 
   );
