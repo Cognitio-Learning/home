@@ -1,10 +1,10 @@
 
 <div style="display:flex;align-items:center;">
-<img src="https://www.simpleimageresizer.com/_uploads/photos/f70c0da8/favicon1_75_1_61.png"/>
+<img src="https://i.ibb.co/Tt7sqr5/cognitio-icon.png" width="125px"/>
 <h1>Cognitio Learning</h1>
 </div>
 
-# Day 1 Python
+# Day 1 Intro to Python for AI
 Day 1 covers the basics of Python.
 
 ## Printing
@@ -17,7 +17,7 @@ print('Hello World')  # This is another comment
 content = 'Hello World'
 print(content)  # Hello World
 ```
-The `print` function takes the `'Hello World'` input and outputs it to the console.
+The `print` function takes the `'Hello World'` input and outputs it to the console. Comments are notes that you can write in your code that won't affect anything.
 
 ## Variables
 Variables are a way to store information to reuse later on. The standard convention for variable naming in Python is `snake_case`.
@@ -126,6 +126,19 @@ Let's say you like playing video games and watching TV, and I wanted you to say 
 
 That is essentially a for loop! In the code above, we are doing the same thing except we are going through the list of fruits and printing each fruit. 
 
+You can also do something like this
+```py
+for i in range(len(fruits)):
+    print(i)
+```
+Now you might be saying, woah woah woah slow down. But all of this is REALLY easy. Using `len(fruits)` returns the amount of items in the list `fruits`, in this case 3. Range outputs a sequence of numbers with the given number, so here it would return `(0, 1, 2)`. The code above would then print 
+```
+0
+1
+2
+```
+> Notice how it did not start from 1 but instead 0, we'll get into that in the future.
+
 ### While Loops
 While loops repeat as long as a condition is true.
 
@@ -144,6 +157,9 @@ while count < 5:
 Imagine you are eating candy in your basket until it's empty, and you don't know how many candies there are in the basket. You would keep eating until there were no more. The same thing is happening here, except the condition to which you stop isn't limited to just running out.
 
 In the code above, we run through the code in the function once, printing `0` and increasing `count` to `1`. We run through the code, printing `1` and increasing `count` to `2`. We keep doing this until count is at `4`. The next time we run this, we print `4` and we increase count by `5`. However, the loop ends now because `count` (5) is no longer less than `5`.
+
+### Exercise
+Make a loop to print out all the years up until your age. This means if I was 10 years old, it would print `1 2 3 4 5 6 7 8 9 10`.
 
 # Conclusion
 
