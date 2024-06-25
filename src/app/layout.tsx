@@ -5,6 +5,7 @@ import NavBar from "@/components/navbar";
 import { cn } from "@/utils/cn";
 import Footer from "@/components/footer";
 import { GoogleAnalytics } from '@next/third-parties/google'
+import React from "react";
 
 const inter = Inter({ subsets: ["latin"] });
 

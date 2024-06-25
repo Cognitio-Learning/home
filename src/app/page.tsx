@@ -2,9 +2,10 @@ import { BackgroundGradient } from "@/components/ui/ace/background-gradient";
 import { MacbookScroll } from "@/components/ui/ace/macbook";
 import { SparklesCore } from "@/components/ui/ace/sparkles";
 import { Button } from "@/components/ui/shadcn/ui/button";
-import { IconAffiliate, IconBook, IconMail, IconRocket } from "@tabler/icons-react";
+import { IconAffiliate, IconBook, IconRocket } from "@tabler/icons-react";
 import Image from "next/image";
 import Link from "next/link";
+import React from "react";
 
 export default function Home() {
   return (
@@ -32,7 +33,7 @@ export default function Home() {
 
           <div className="absolute inset-0 w-full h-full bg-main-bg [mask-image:radial-gradient(350px_200px_at_top,transparent_20%,white)]"></div>
         </div>
-        <Link className="font-semibold text-lg lg:text-xl bg-white rounded-lg p-4 text-black" href="#start">See what it's about.</Link>
+        <Link className="font-semibold text-lg lg:text-xl bg-white rounded-lg p-4 text-black" href="#start">See what it&apos;s about.</Link>
       </div>
 
       <div className="w-full overflow-hidden hidden lg:block" id="start">
@@ -109,7 +110,7 @@ export default function Home() {
       </div>
       <div className="w-full bg-gradient-to-tr bg-main-bg h-[40rem] mt-20 flex flex-col items-center py-20">
         <h1 className="text-xl lg:text-5xl font-bold ">Stay connected with Cognitio</h1>
-        <p className="text-gray-300 text-md md:text-lg leading-8 lg:w-1/3 text-center mt-8">Don't miss out on the latest updates and resources from Cognitio. Our newsleter keeps you informed about new programs, upcoming events, and exciting projects. Whether you're a parent, teacher, or a young learner our newsletter is your gateway to all things coding and AI.</p>
+        <p className="text-gray-300 text-md md:text-lg leading-8 lg:w-1/3 text-center mt-8">Don&apos;t miss out on the latest updates and resources from Cognitio. Our newsleter keeps you informed about new programs, upcoming events, and exciting projects. Whether you&apos;re a parent, teacher, or a young learner our newsletter is your gateway to all things coding and AI.</p>
         <form className="flex gap-4 lg:gap-8 mt-10 flex-col md:flex-row w-full lg:w-1/3">
           <input type="email" placeholder="Enter your email" className="min-w-0 flex-auto rounded-md  border-0 bg-white/5 px-3.5 py-2 text-white shadow-sm ring-1 ring-inset ring-white/10 focus:ring-2 focus:ring-inset focus:ring-indigo-500 sm:text-sm sm:leading-6" />
           <button className="bg-purple-600 hover:bg-purple-700 text-white p-4 py-2 md:py-4 rounded-lg" type="submit">Subscribe</button>
