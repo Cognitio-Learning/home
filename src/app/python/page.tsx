@@ -76,24 +76,26 @@ export default function Python() {
     })
 
     const onSubmit = (data: z.infer<typeof formSchema>) => {
-        console.log(data)
+        setRegistered(false)
         fetch('/api/signup', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
             },
             body: JSON.stringify(data)
+        }).then(res => res.json()).then(data => {
+            console.log(data)
+            setRegistered(true)
         })
-        setRegistered(true)
     }
 
     const [registered, setRegistered] = useState(false)
 
-    useEffect(() => {
+    /* useEffect(() => {
         if(form.formState.isSubmitSuccessful) {
             form.reset({})
         }
-    }, [form.formState, form.reset])
+    }, [form.formState, form.reset]) */
 
     return (
         <div className="flex flex-col items-center justify-center w-screen text-white p-3">

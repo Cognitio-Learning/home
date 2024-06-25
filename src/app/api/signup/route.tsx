@@ -9,9 +9,9 @@ export async function POST(req: NextRequest) {
     const data: FormValues = await req.json()
     try {
         addRowToSpreadsheet(sheetId, data)
-        return NextResponse.json({ message: "Success" }, {status: 200})
+        return NextResponse.json({ message: "Success" }, { status: 200 })
     } catch (e) {
-        return NextResponse.json({ message: "Error" }, {status: 500})
+        return NextResponse.json({ message: "Error" }, { status: 500 })
     }
 
 }
@@ -24,7 +24,7 @@ async function addRowToSpreadsheet(sheetId: string, rowData: FormValues) {
 
     const jwt = new JWT({
         email: process.env.client_email,
-        key: process.env.private_key,
+        key: process.env.private_key?.split(String.raw`\n`).join('\n'),
         scopes: SCOPES
     })
 

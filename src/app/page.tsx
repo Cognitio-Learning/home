@@ -98,7 +98,7 @@ export default function Home() {
         <h1 className="text-3xl lg:text-4xl font-bold text-white mb-20">Our Programs</h1>
         <div className="hover:cursor-default">
           <BackgroundGradient className="max-w-sm bg-zinc-900 p-4 rounded-[22px]">
-            <Image src="/svg/code_thinking.svg" width={300} height={200} alt="python" className="m-4 w-1/2" />
+            <Image src="/svg/code_thinking.svg" width={300} height={200} alt="python" className="m-4 w-1/2 lg:w-full" />
             <h2 className="text-xl font-bold">Intro to Python for AI</h2>
             <p className="text-body-text w-3/4">Learn the basics of Python and AI in this introductory course. Perfect for beginners!</p>
             <div className="flex mt-4">
