@@ -28,7 +28,7 @@ import { Button } from "@/components/ui/shadcn/ui/button";
 import { useEffect, useState } from "react";
 import { redirect } from "next/navigation";
 
-export const formSchema = z.object({
+const formSchema = z.object({
     firstName: z.string()
         .min(2, {
             message: "First name must be at least 2 characters long",

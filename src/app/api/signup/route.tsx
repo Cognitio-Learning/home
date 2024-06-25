@@ -1,13 +1,12 @@
-import { formSchema } from "../../python/page";
-import { z } from "zod";
 import { JWT } from 'google-auth-library'
 import { GoogleSpreadsheet } from 'google-spreadsheet'
 import { NextRequest, NextResponse } from "next/server";
+import { FormValues } from "@/types/types";
 
 const sheetId = '1iceZCqPn1GETXZB5AfLvTeIeLnYkMQ-TjRWyiSNtRTg';
 
 export async function POST(req: NextRequest) {
-    const data: z.infer<typeof formSchema> = await req.json()
+    const data: FormValues = await req.json()
     try {
         addRowToSpreadsheet(sheetId, data)
         return NextResponse.json({ message: "Success" }, {status: 200})
@@ -18,7 +17,7 @@ export async function POST(req: NextRequest) {
 }
 
 
-async function addRowToSpreadsheet(sheetId: string, rowData: z.infer<typeof formSchema>) {
+async function addRowToSpreadsheet(sheetId: string, rowData: FormValues) {
     const SCOPES = [
         'https://www.googleapis.com/auth/spreadsheets',
     ]
