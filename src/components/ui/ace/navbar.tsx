@@ -72,7 +72,7 @@ export const Menu = ({
             onMouseLeave={() => setActive(null)} // resets the state
             className="relative rounded-full boder bg-gradient-to-r from-indigo-500 via-violet-500 to-indigo-500 border-white/[0.2]  shadow-input flex justify-center lg:justify-between items-center  "
         >
-            <Link className=" font-semibold text-neutral-50 mx-6 text-lg hover:cursor-pointer hidden lg:block" href="/">Cognitio Learning</Link>
+            <Link className=" font-semibold text-neutral-50 mx-6 text-md md:text-lg hover:cursor-pointer" href="/">Cognitio Learning</Link>
             <div className="flex justify-center space-x-4 px-8 py-6 ">
                 {children}
 

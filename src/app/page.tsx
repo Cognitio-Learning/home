@@ -1,12 +1,14 @@
+import { BackgroundGradient } from "@/components/ui/ace/background-gradient";
 import { MacbookScroll } from "@/components/ui/ace/macbook";
 import { SparklesCore } from "@/components/ui/ace/sparkles";
+import { Button } from "@/components/ui/shadcn/ui/button";
 import { IconAffiliate, IconBook, IconMail, IconRocket } from "@tabler/icons-react";
 import Image from "next/image";
 import Link from "next/link";
 
 export default function Home() {
   return (
-    <main className="flex min-h-screen text-white flex-col items-center justify-between ">
+    <main className="flex min-h-screen text-white flex-col items-center justify-between w-screen p-4">
       <div className="h-screen w-full  flex flex-col items-center justify-center overflow-hidden rounded-md">
         <h1 className="text-6xl lg:text-9xl font-bold text-center relative z-20">
           Cognitio Learning
@@ -40,71 +42,79 @@ export default function Home() {
           showGradient={true}
         />
       </div>
-      <div className="lg:-mt-[5rem] flex flex-col items-center text-body-text mt-12 w-screen">
+      <div className="lg:-mt-[5rem] flex flex-col items-center text-body-text mt-12 w-full">
         <h1 className="text-3xl lg:text-4xl font-bold text-white ">What we offer</h1>
         <div className="flex justify-between gap-16 mt-8 items-center lg:flex-row flex-col">
-          <div className="lg:w-[40rem] w-[24rem] md:w-full flex items-center lg:items-start flex-col ">
+          <div className="lg:w-[40rem] flex items-center lg:items-start flex-col ">
             <h1 className="text-xl lg:text-3xl font-bold text-white">Interactive Learning</h1>
             <p className="text-md text-center lg:text-start">Our carefully designed curriculum makes learning to code simple and fun. With step-by-step instructions and interactive exercises, kids can learn at easily, building confidence as they go.</p>
           </div>
-          <div className="w-3/4 lg:w-7/12 flex lg:justify-end">
+          <div className="lg:w-7/12 flex lg:justify-end">
             <Image src="/mockup1.png" width={600} height={400} alt="mockup" className="rounded-xl" sizes="(max-width: 640px) 100vw, 50vw" />
           </div>
         </div>
 
         <div className="flex md:justify-between gap-16 mt-8 items-center flex-col lg:flex-row-reverse">
-          <div className="lg:w-[40rem] w-[24rem] md:w-full flex items-center lg:items-start flex-col ">
+          <div className="lg:w-[40rem] flex items-center lg:items-start flex-col ">
             <h1 className="text-xl lg:text-3xl font-bold text-white ">Hands-on AI Projects</h1>
             <p className="text-md text-center lg:text-start">Our carefully designed curriculum makes learning to code simple and fun. With step-by-step instructions and interactive exercises, kids can learn at easily, building confidence as they go.</p>
           </div>
-          <div className="w-3/4 lg:w-7/12">
+          <div className="lg:w-7/12">
             <Image src="/mockup2.png" width={600} height={400} alt="mockup" className="rounded-xl" sizes="(max-width: 640px) 100vw, 50vw" />
           </div>
         </div>
 
         <div className="flex md:justify-between gap-16 mt-8 lg:mt-16 items-center lg:flex-row flex-col">
-          <div className="w-[24rem] md:w-[40rem] flex items-center flex-col ">
+          <div className="md:w-[40rem] flex items-center flex-col ">
             <h1 className="text-xl lg:text-3xl font-bold text-white ">Experienced Mentors</h1>
             <p className="text-md text-center">Our team of experienced mentors is dedicated to guiding students through their coding and AI journey. With personalized support and encouragement, we help everyone reach their full potential</p>
           </div>
         </div>
 
-        <div className="w-[40rem]"></div>
+        <div className="lg:w-[40rem]"></div>
       </div>
 
       <div className="py-32 flex justify-center flex-col items-center w-full mt-20">
         <h1 className="text-3xl lg:text-4xl font-bold text-white pb-8">Why choose us?</h1>
-        <div className="flex flex-col lg:flex-row gap-8">
-          <div className="flex flex-col items-center w-[24rem]">
+        <div className="flex flex-col lg:flex-row gap-8 items-center justify-center">
+          <div className="flex flex-col items-center lg:w-1/4">
             <IconBook size={100} stroke={1} color="#5e17eb" />
             <h1 className="text-xl lg:text-2xl font-bold text-white mt-4 mb-2">Engaging Curriculum</h1>
             <p className="text-body-text text-center">Our curriculum is designed with young learners in mind, making complex topics simple and exciting. We use kid-friendly and real-world examples to keep kids engaged and motivated.</p>
           </div>
-          <div className="flex flex-col items-center w-[24rem]">
+          <div className="flex flex-col items-center lg:w-1/4">
             <IconAffiliate size={100} stroke={1} color="#5e17eb" />
             <h1 className="text-xl lg:text-2xl font-bold text-white mt-4 mb-2">Inclusive and Accessible</h1>
             <p className="text-body-text text-center">Cognitio is committed to making coding and AI education accessible to all children. All courses that we offer are <span className=" text-white">FREE</span> to ensure no one is left behind.</p>
           </div>
-          <div className="flex flex-col items-center w-[24rem]">
+          <div className="flex flex-col items-center lg:w-1/4">
             <IconRocket size={100} stroke={1} color="#5e17eb" />
             <h1 className="text-xl lg:text-2xl font-bold text-white mt-4 mb-2">Future-Ready Skills</h1>
             <p className="text-body-text text-center">We prepare kids for the future by teaching them the skills they need to succeed in a technology-driven world. Our programs focus on creativity, critical thinking, and problem-solving. </p>
-          </div>
+          </div>  
         </div>
       </div>
-      
+      <div className="flex justify-center flex-col items-center w-full">
+        <h1 className="text-3xl lg:text-4xl font-bold text-white mb-20">Our Programs</h1>
+        <div className="hover:cursor-default">
+          <BackgroundGradient className="max-w-sm bg-zinc-900 p-4 rounded-[22px]">
+            <Image src="/svg/code_thinking.svg" width={300} height={200} alt="python" className="m-4 w-1/2" />
+            <h2 className="text-xl font-bold">Intro to Python for AI</h2>
+            <p className="text-body-text w-3/4">Learn the basics of Python and AI in this introductory course. Perfect for beginners!</p>
+            <div className="flex mt-4">
+              <Link href="/python"><Button>Get Started</Button></Link>
+            </div>
+          </BackgroundGradient>
+        </div>
+      </div>
       <div className="w-full bg-gradient-to-tr bg-main-bg h-[40rem] mt-20 flex flex-col items-center py-20">
-        <h1 className="text-2xl lg:text-5xl font-bold">Stay connected with Cognitio</h1>
-        <p className="text-gray-300 text-lg leading-8 w-3/4 lg:w-1/3 text-center mt-8">Don't miss out on the latest updates and resources from Cognitio. Our newsleter keeps you informed about new programs, upcoming events, and exciting projects. Whether you're a parent, teacher, or a young learner our newsletter is your gateway to all things coding and AI.</p>
-        <form className="flex gap-4 lg:gap-8 mt-10 ">
-          <input type="email" placeholder="Enter your email" className="min-w-0 flex-auto rounded-md lg:w-[20rem] border-0 bg-white/5 px-3.5 py-2 text-white shadow-sm ring-1 ring-inset ring-white/10 focus:ring-2 focus:ring-inset focus:ring-indigo-500 sm:text-sm sm:leading-6" />
-          <button className="bg-purple-600 hover:bg-purple-700 text-white p-4 rounded-lg" type="submit">Subscribe</button>
+        <h1 className="text-xl lg:text-5xl font-bold ">Stay connected with Cognitio</h1>
+        <p className="text-gray-300 text-md md:text-lg leading-8 lg:w-1/3 text-center mt-8">Don't miss out on the latest updates and resources from Cognitio. Our newsleter keeps you informed about new programs, upcoming events, and exciting projects. Whether you're a parent, teacher, or a young learner our newsletter is your gateway to all things coding and AI.</p>
+        <form className="flex gap-4 lg:gap-8 mt-10 flex-col md:flex-row w-full lg:w-1/3">
+          <input type="email" placeholder="Enter your email" className="min-w-0 flex-auto rounded-md  border-0 bg-white/5 px-3.5 py-2 text-white shadow-sm ring-1 ring-inset ring-white/10 focus:ring-2 focus:ring-inset focus:ring-indigo-500 sm:text-sm sm:leading-6" />
+          <button className="bg-purple-600 hover:bg-purple-700 text-white p-4 py-2 md:py-4 rounded-lg" type="submit">Subscribe</button>
         </form>
       </div>
-
-      {/* Footer */}
-
-      
     </main>
 
   );
