@@ -90,11 +90,11 @@ export default function Python() {
 
     const [registered, setRegistered] = useState(false)
 
-    useEffect(() => {
+    /* useEffect(() => {
         if(form.formState.isSubmitSuccessful) {
             form.reset({})
         }
-    }, [form.formState, form.reset])
+    }, [form.formState, form.reset]) */
 
     return (
         <div className="flex flex-col items-center justify-center w-screen text-white p-3">
