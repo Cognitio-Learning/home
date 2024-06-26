@@ -83,8 +83,11 @@ export default function Python() {
             },
             body: JSON.stringify(data)
         }).then(res => res.json()).then(data => {
-            console.log(data)
-            setRegistered(true)
+            if(data.message === 'Success') {
+                setRegistered(true)
+            } else {
+                setRegistered(false)
+            }
         })
     }
 
