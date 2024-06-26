@@ -23,9 +23,6 @@ export async function POST(req: NextRequest) {
     const newRow = Object.values(data);
     await sheet.addRow(newRow);
 
-    console.log('New row added successfully');
     return NextResponse.json({ message: "Success" }, { status: 200 })
-
-
 }
 
