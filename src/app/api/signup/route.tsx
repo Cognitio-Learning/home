@@ -12,8 +12,8 @@ export async function POST(req: NextRequest) {
     ]
 
     const jwt = new JWT({
-        email: process.env.NEXT_PUBLIC_CLIENT_EMAIL,
-        key: process.env.NEXT_PUBLIC_PRIVATE_KEY?.split(String.raw`\n`).join('\n'),
+        email: process.env.client_email,
+        key: process.env.private_key?.split(String.raw`\n`).join('\n'),
         scopes: SCOPES
     })
 
