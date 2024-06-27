@@ -1,3 +1,5 @@
+'use client'
+
 import { BackgroundGradient } from "@/components/ui/ace/background-gradient";
 import { MacbookScroll } from "@/components/ui/ace/macbook";
 import { SparklesCore } from "@/components/ui/ace/sparkles";
@@ -5,9 +7,60 @@ import { Button } from "@/components/ui/shadcn/ui/button";
 import { IconAffiliate, IconBook, IconRocket } from "@tabler/icons-react";
 import Image from "next/image";
 import Link from "next/link";
-import React from "react";
+import React, { useEffect, useState } from "react";
+import { z } from "zod";
+import { zodResolver } from "@hookform/resolvers/zod"
+import { useForm } from "react-hook-form"
+import {
+  Form,
+  FormControl,
+  FormField,
+  FormItem,
+  FormMessage,
+} from "@/components/ui/shadcn/ui/form"
+
+const formSchema = z.object({
+  email: z.string().email({
+    message: "Invalid email address."
+  })
+})
+
 
 export default function Home() {
+
+  const form = useForm<z.infer<typeof formSchema>>({
+    resolver: zodResolver(formSchema),
+    defaultValues: {
+      email: "",
+    },
+  })
+
+  const [subscribed, setSubscribed] = useState(false)
+  const [loading, setLoading] = useState(false)
+
+  const onSubmit = (data: z.infer<typeof formSchema>) => {
+    setLoading(true)
+    setSubscribed(false)
+    fetch('/api/newsletter', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(data)
+    }).then(res => res.json()).then(data => {
+      if (data.message === "Success") {
+        setSubscribed(true)
+        setLoading(false)
+      }
+    })
+  }
+
+  useEffect(() => {
+    if (form.formState.isSubmitSuccessful) {
+      form.reset({})
+    }
+  }, [form.formState, form.reset])
+
   return (
     <main className="flex min-h-screen text-white flex-col items-center justify-between w-screen p-4">
       <div className="h-screen w-full  flex flex-col items-center justify-center overflow-hidden rounded-md">
@@ -92,7 +145,7 @@ export default function Home() {
             <IconRocket size={100} stroke={1} color="#5e17eb" />
             <h1 className="text-xl lg:text-2xl font-bold text-white mt-4 mb-2">Future-Ready Skills</h1>
             <p className="text-body-text text-center">We prepare kids for the future by teaching them the skills they need to succeed in a technology-driven world. Our programs focus on creativity, critical thinking, and problem-solving. </p>
-          </div>  
+          </div>
         </div>
       </div>
       <div className="flex justify-center flex-col items-center w-full">
@@ -111,10 +164,25 @@ export default function Home() {
       <div className="w-full bg-gradient-to-tr bg-main-bg h-[40rem] mt-20 flex flex-col items-center py-20">
         <h1 className="text-xl lg:text-5xl font-bold ">Stay connected with Cognitio</h1>
         <p className="text-gray-300 text-md md:text-lg leading-8 lg:w-1/3 text-center mt-8">Don&apos;t miss out on the latest updates and resources from Cognitio. Our newsleter keeps you informed about new programs, upcoming events, and exciting projects. Whether you&apos;re a parent, teacher, or a young learner our newsletter is your gateway to all things coding and AI.</p>
-        <form className="flex gap-4 lg:gap-8 mt-10 flex-col md:flex-row w-full lg:w-1/3">
-          <input type="email" placeholder="Enter your email" className="min-w-0 flex-auto rounded-md  border-0 bg-white/5 px-3.5 py-2 text-white shadow-sm ring-1 ring-inset ring-white/10 focus:ring-2 focus:ring-inset focus:ring-indigo-500 sm:text-sm sm:leading-6" />
-          <button className="bg-purple-600 hover:bg-purple-700 text-white p-4 py-2 md:py-4 rounded-lg" type="submit">Subscribe</button>
-        </form>
+
+        <Form {...form}>
+          <form onSubmit={form.handleSubmit(onSubmit)} className="flex gap-4 lg:gap-8 mt-10 flex-col md:flex-row w-full lg:w-1/3">
+            <FormField
+              control={form.control}
+              name="email"
+              render={({ field }) => (
+                <FormItem className="w-full">
+                  <FormControl className="w-full">
+                    <input {...field} type="email" placeholder="Enter your email" className="min-w-0 flex-auto rounded-md  border-0 bg-white/5 px-3.5 py-4 text-white shadow-sm ring-1 ring-inset ring-white/10 focus:ring-2 focus:ring-inset focus:ring-indigo-500 sm:text-sm sm:leading-6" />
+                  </FormControl>
+                  <FormMessage />
+                </FormItem>
+              )}
+            />
+            <button className="bg-purple-600 hover:bg-purple-700 text-white p-4 py-2 md:py-4 rounded-lg" type="submit">Subscribe</button>          </form>
+        </Form>
+        { loading && <p className="mt-4 text-purple-300">Working...</p>}
+        { subscribed && <p className="mt-4 text-green-500">You have subscribed to our newsletter!</p>}
       </div>
     </main>
 
