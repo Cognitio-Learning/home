@@ -48,7 +48,7 @@ export default function Home() {
         <div className="flex justify-between gap-16 mt-8 items-center lg:flex-row flex-col">
           <div className="lg:w-[40rem] flex lg:items-start flex-col ">
             <h1 className="text-xl lg:text-3xl font-bold text-white">Interactive Learning</h1>
-            <p className="text-md">Our carefully designed curriculum makes learning to code simple and fun. With step-by-step instructions and interactive exercises, kids can learn at easily, building confidence as they go.</p>
+            <p className="text-md">Our carefully designed curriculum makes learning to code simple and fun. With step-by-step instructions and interactive exercises, kids can learn at ease, building confidence as they go.</p>
           </div>
           <div className="lg:w-7/12 flex lg:justify-end">
             <Image src="/mockup1.png" width={600} height={400} alt="mockup" className="rounded-xl" sizes="(max-width: 640px) 100vw, 50vw" />
@@ -58,7 +58,7 @@ export default function Home() {
         <div className="flex md:justify-between gap-16 mt-8 items-center flex-col lg:flex-row-reverse">
           <div className="lg:w-[40rem] flex lg:items-start flex-col ">
             <h1 className="text-xl lg:text-3xl font-bold text-white ">Hands-on AI Projects</h1>
-            <p className="text-md lg:text-start">Our carefully designed curriculum makes learning to code simple and fun. With step-by-step instructions and interactive exercises, kids can learn at easily, building confidence as they go.</p>
+            <p className="text-md lg:text-start">We introduce children to the fascinating world of artificial intelligence through fun and practical projects. From creating chatbots to exploring machine learning, we bring AI concepts to life in an accessible way.</p>
           </div>
           <div className="lg:w-7/12">
             <Image src="/mockup2.png" width={600} height={400} alt="mockup" className="rounded-xl" sizes="(max-width: 640px) 100vw, 50vw" />
