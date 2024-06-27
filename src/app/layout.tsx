@@ -1,3 +1,5 @@
+'use client'
+
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
@@ -6,13 +8,9 @@ import { cn } from "@/utils/cn";
 import Footer from "@/components/footer";
 import { GoogleAnalytics } from '@next/third-parties/google'
 import React from "react";
+import { motion } from 'framer-motion'
 
 const inter = Inter({ subsets: ["latin"] });
-
-export const metadata: Metadata = {
-  title: "Cognitio Learning",
-  description: "Simplified learning for the next generation.",
-};
 
 export default function RootLayout({
   children,
@@ -23,12 +21,26 @@ export default function RootLayout({
     <html lang="en" className="scroll-smooth  bg-main-bg">
       <body className={cn(inter.className, 'relative w-full flex flex-col items-center justify-center')}>
         <NavBar className="top-2" />
-
         <>
-          {children}
+          <motion.div className="w-full flex flex-col items-center justify-center"
+            initial={{
+              opacity: 0,
+              y: 20,
+            }}
+            animate={{
+              opacity: 1,
+              y: [20, -5, 0],
+            }}
+            transition={{
+              duration: 0.5,
+              ease: [0.4, 0.0, 0.2, 1],
+            }} >
+            {children}
+
+          </motion.div>
           <Footer />
         </>
-        <GoogleAnalytics gaId="G-9T66WJ0Z2G"/>
+        <GoogleAnalytics gaId="G-9T66WJ0Z2G" />
       </body>
     </html>
   );
