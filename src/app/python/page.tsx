@@ -83,8 +83,11 @@ export default function Python() {
             },
             body: JSON.stringify(data)
         }).then(res => res.json()).then(data => {
-            console.log(data)
-            setRegistered(true)
+            if(data.message === 'Success') {
+                setRegistered(true)
+            } else {
+                setRegistered(false)
+            }
         })
     }
 
@@ -98,22 +101,25 @@ export default function Python() {
 
     return (
         <div className="flex flex-col items-center justify-center w-screen text-white p-3">
-            <div className="flex justify-center gap-8 flex-col lg:flex-row px-8 items-center mb-20 h-screen">
+            <div className="flex justify-center gap-8 flex-col lg:flex-row lg:px-8 items-center mb-20 h-screen">
                 <div className="w-full lg:w-[35rem]">
                     <h1 className="text-4xl font-bold">Intro to Python for AI</h1>
                     <p className="text-lg text-body-text tracking-tight mt-4">Welcome to &quot;Intro to Python for AI,&quot; a <span className="text-white font-semibold">beginner-friendly course</span> designed to introduce young learners to the exciting world of programming and AI. This bootcamp is perfect for kids aged <span className="text-white font-semibold">8-14</span> who are eager to explore the basics of Python and how it can be used to create intelligent.</p>
+                    <p className="font-semibold text-lg mt-4">Course Dates: TBD</p>
+                    <p className="font-semibold text-lg">Cost: FREE</p>
+
                     <Link href="#signup"><button className="bg-primary py-2 px-6 mt-10 lg:mt-20 font-semibold rounded-lg hover:opacity-80">Register Now</button></Link>
 
                 </div>
                 <Image src="/svg/teaching.svg" width={500} height={100} alt="teaching" className="w-2/3 lg:w-[40rem] hidden lg:block" />
             </div>
             <Link href="#about" className="-mt-[10rem]"><IconChevronDown size={32} className=" animate-bounce" /></Link>
-            <div className="pt-20 lg:pt-[15rem] pb-20 justify-center flex flex-col items-center w-full" id="about">
+            <div className="pt-20 lg:pt-[15rem] pb-20 justify-center flex flex-col lg:items-center w-full" id="about">
                 <h1 className="font-bold text-3xl">Course Structure</h1>
                 <div className="flex flex-col items-center gap-20 w-full md:w-3/4 lg:w-1/2">
                     <div className="">
-                        <h2 className="text-2xl font-semibold text-center lg:text-start mt-8 lg:mt-0">Intro to Python for AI</h2>
-                        <p className="text-lg text-body-text tracking-tight mt-4 text-center lg:text-start ">Through this bootcamp, students will learn the basics of python, basic AI concepts, implementation of AI, and the essentials of fullstack web development. Students will develop critical thinking skills, problem solving skills, and most importantly creatvitiy. </p>
+                        <h2 className="text-2xl font-semibold mt-8 lg:mt-0">Intro to Python for AI</h2>
+                        <p className="text-lg text-body-text tracking-tight mt-4  ">Through this bootcamp, students will learn the basics of python, basic AI concepts, implementation of AI, and the essentials of fullstack web development. Students will develop critical thinking skills, problem solving skills, and most importantly creatvitiy. </p>
                     </div>
                     <Accordion type="multiple" className="w-full" >
                         <AccordionItem value="item-1">
@@ -269,6 +275,9 @@ export default function Python() {
                                                     <FormControl>
                                                         <Textarea {...field} className="bg-white text-black resize-none" />
                                                     </FormControl>
+                                                    <FormDescription>
+                                                        
+                                                    </FormDescription>
                                                     <FormMessage />
                                                 </FormItem>
                                             )}
@@ -281,9 +290,7 @@ export default function Python() {
                                 </form>
                             </Form>
                         </div>
-
                     </div>
-
                 </div>
             </div>
         </div>

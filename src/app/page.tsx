@@ -46,9 +46,9 @@ export default function Home() {
       <div className="lg:-mt-[5rem] flex flex-col items-center text-body-text mt-12 w-full">
         <h1 className="text-3xl lg:text-4xl font-bold text-white ">What we offer</h1>
         <div className="flex justify-between gap-16 mt-8 items-center lg:flex-row flex-col">
-          <div className="lg:w-[40rem] flex items-center lg:items-start flex-col ">
+          <div className="lg:w-[40rem] flex lg:items-start flex-col ">
             <h1 className="text-xl lg:text-3xl font-bold text-white">Interactive Learning</h1>
-            <p className="text-md text-center lg:text-start">Our carefully designed curriculum makes learning to code simple and fun. With step-by-step instructions and interactive exercises, kids can learn at easily, building confidence as they go.</p>
+            <p className="text-md">Our carefully designed curriculum makes learning to code simple and fun. With step-by-step instructions and interactive exercises, kids can learn at ease, building confidence as they go.</p>
           </div>
           <div className="lg:w-7/12 flex lg:justify-end">
             <Image src="/mockup1.png" width={600} height={400} alt="mockup" className="rounded-xl" sizes="(max-width: 640px) 100vw, 50vw" />
@@ -56,9 +56,9 @@ export default function Home() {
         </div>
 
         <div className="flex md:justify-between gap-16 mt-8 items-center flex-col lg:flex-row-reverse">
-          <div className="lg:w-[40rem] flex items-center lg:items-start flex-col ">
+          <div className="lg:w-[40rem] flex lg:items-start flex-col ">
             <h1 className="text-xl lg:text-3xl font-bold text-white ">Hands-on AI Projects</h1>
-            <p className="text-md text-center lg:text-start">Our carefully designed curriculum makes learning to code simple and fun. With step-by-step instructions and interactive exercises, kids can learn at easily, building confidence as they go.</p>
+            <p className="text-md lg:text-start">We introduce children to the fascinating world of artificial intelligence through fun and practical projects. From creating chatbots to exploring machine learning, we bring AI concepts to life in an accessible way.</p>
           </div>
           <div className="lg:w-7/12">
             <Image src="/mockup2.png" width={600} height={400} alt="mockup" className="rounded-xl" sizes="(max-width: 640px) 100vw, 50vw" />
@@ -66,9 +66,9 @@ export default function Home() {
         </div>
 
         <div className="flex md:justify-between gap-16 mt-8 lg:mt-16 items-center lg:flex-row flex-col">
-          <div className="md:w-[40rem] flex items-center flex-col ">
+          <div className="md:w-[40rem] flex flex-col lg:text-center">
             <h1 className="text-xl lg:text-3xl font-bold text-white ">Experienced Mentors</h1>
-            <p className="text-md text-center">Our team of experienced mentors is dedicated to guiding students through their coding and AI journey. With personalized support and encouragement, we help everyone reach their full potential</p>
+            <p className="text-md">Our team of experienced mentors is dedicated to guiding students through their coding and AI journey. With personalized support and encouragement, we help everyone reach their full potential</p>
           </div>
         </div>
 
@@ -86,7 +86,7 @@ export default function Home() {
           <div className="flex flex-col items-center lg:w-1/4">
             <IconAffiliate size={100} stroke={1} color="#5e17eb" />
             <h1 className="text-xl lg:text-2xl font-bold text-white mt-4 mb-2">Inclusive and Accessible</h1>
-            <p className="text-body-text text-center">Cognitio is committed to making coding and AI education accessible to all children. All courses that we offer are <span className=" text-white">FREE</span> to ensure no one is left behind.</p>
+            <p className="text-body-text text-center">Cognitio is committed to making coding and AI education accessible to all children. All courses that we offer are <span className=" text-white font-semibold">FREE</span> to ensure no one is left behind.</p>
           </div>
           <div className="flex flex-col items-center lg:w-1/4">
             <IconRocket size={100} stroke={1} color="#5e17eb" />
