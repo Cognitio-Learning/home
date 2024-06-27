@@ -5,7 +5,7 @@
 </div>
 
 # Day 1 Intro to Python for AI
-Day 1 covers the basics of Python.
+Day 1 covers the basics of Python including data types, conditional statements, and loops. 
 
 ## Printing
 The basics of any programming language include learning how to print something to your console. In Python, you accomplish this by running `print('Hello World')`.
