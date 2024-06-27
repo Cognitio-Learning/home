@@ -125,19 +125,19 @@ export default function Python() {
                         <AccordionItem value="item-1">
                             <AccordionTrigger>Introduction and Basics of Python</AccordionTrigger>
                             <AccordionContent>
-                                This section introduces participants to the bootcamp, outlining its goals and benefits, especially focusing on the advantages of learning and implementing AI. Participants will then dive into the basics of Python, covering fundamental concepts and building a strong foundation in programming. View day-by-day curriculum <Link href='/' className="text-blue-500">here</Link>.
+                                This section introduces participants to the bootcamp, outlining its goals and benefits, especially focusing on the advantages of learning and implementing AI. Participants will then dive into the basics of Python, covering fundamental concepts and building a strong foundation in programming. View day-by-day curriculum <Link href='/content' className="text-blue-500">here</Link>.
                             </AccordionContent>
                         </AccordionItem>
                         <AccordionItem value="item-2">
                             <AccordionTrigger> Introduction to AI and Implementation</AccordionTrigger>
                             <AccordionContent>
-                                This section introduces participants to AI concepts and how to implement them using Python. Participants will learn the basics of machine learning and AI, explore different AI models, and implement simple AI algorithms. View day-by-day curriculum <Link href='/' className="text-blue-500">here</Link>.
+                                This section introduces participants to AI concepts and how to implement them using Python. Participants will learn the basics of machine learning and AI, explore different AI models, and implement simple AI algorithms. View day-by-day curriculum <Link href='/content' className="text-blue-500">here</Link>.
                             </AccordionContent>
                         </AccordionItem>
                         <AccordionItem value="item-3">
                             <AccordionTrigger>Basics of Fullstack and AI Backend</AccordionTrigger>
                             <AccordionContent>
-                                This section introduces participants to the basics of HTML and fullstack web development. Participants will learn how to create a simple web application that takes user input, processes it with a backend AI model, and displays the response on the web page. View day-by-day curriculum <Link href='/' className="text-blue-500">here</Link>.
+                                This section introduces participants to the basics of HTML and fullstack web development. Participants will learn how to create a simple web application that takes user input, processes it with a backend AI model, and displays the response on the web page. View day-by-day curriculum <Link href='/content' className="text-blue-500">here</Link>.
                             </AccordionContent>
                         </AccordionItem>
                     </Accordion>
