@@ -11,6 +11,7 @@ import React, { useEffect, useState } from "react";
 import { z } from "zod";
 import { zodResolver } from "@hookform/resolvers/zod"
 import { useForm } from "react-hook-form"
+import { motion } from "framer-motion"
 import {
   Form,
   FormControl,
@@ -89,6 +90,7 @@ export default function Home() {
         <Link className="font-semibold text-lg lg:text-xl bg-white rounded-lg p-4 text-black" href="#start">See what it&apos;s about.</Link>
       </div>
 
+
       <div className="w-full overflow-hidden hidden lg:block" id="start">
         <MacbookScroll
           title={"Simple and easy to learn."}
@@ -152,7 +154,7 @@ export default function Home() {
         <h1 className="text-3xl lg:text-4xl font-bold text-white mb-20">Our Programs</h1>
         <div className="hover:cursor-default">
           <BackgroundGradient className="max-w-sm bg-zinc-900 p-4 rounded-[22px]">
-            <Image src="/svg/code_thinking.svg" width={300} height={200} alt="python" className="m-4 w-1/2 lg:w-full" />
+            <Image src="/svg/code_thinking.svg" width={300} height={200} alt="python" className="m-4 w-full" />
             <h2 className="text-xl font-bold">Intro to Python for AI</h2>
             <p className="text-body-text w-3/4">Learn the basics of Python and AI in this introductory course. Perfect for beginners!</p>
             <div className="flex mt-4">
@@ -181,8 +183,8 @@ export default function Home() {
             />
             <button className="bg-purple-600 hover:bg-purple-700 text-white p-4 py-2 md:py-4 rounded-lg" type="submit">Subscribe</button>          </form>
         </Form>
-        { loading && <p className="mt-4 text-purple-300">Working...</p>}
-        { subscribed && <p className="mt-4 text-green-500">You have subscribed to our newsletter!</p>}
+        {loading && <p className="mt-4 text-purple-300">Working...</p>}
+        {subscribed && <p className="mt-4 text-green-500">You have subscribed to our newsletter!</p>}
       </div>
     </main>
 
