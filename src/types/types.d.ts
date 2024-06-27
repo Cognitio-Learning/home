@@ -9,3 +9,7 @@ export interface FormValues {
     parentsEmail: string;
     heardFrom: string;
 }
+
+export interface NewsletterOptions {
+    email: string
+}

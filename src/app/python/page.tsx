@@ -283,7 +283,7 @@ export default function Python() {
                                             )}
                                         />
                                     </div>
-                                    <Button type="submit" className="bg-primary py-2 font-semibold rounded-lg hover:opacity-80">Register Now</Button>
+                                    <button type="submit" className="bg-primary py-2 font-semibold rounded-lg hover:opacity-80">Register Now</button>
                                     {
                                         registered && <p className="text-green-500">Successfully registered!</p>
                                     }
