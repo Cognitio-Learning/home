@@ -1,5 +1,3 @@
-import { PinContainer } from '@/components/ui/ace/3d-pin';
-import { GetStaticProps, InferGetStaticPropsType } from 'next';
 import Link from 'next/link';
 import React from 'react';
 
@@ -28,7 +26,7 @@ export default function Content() {
 
     return (
         <div className="h-screen w-screen text-white flex justify-center items-center" >
-            <div className='flex justify-center items-center md:w-3/4 flex-wrap gap-4'>
+            <div className='flex justify-center items-center md:w-3/4 flex-wrap gap-4 p-4'>
                 {
                     pages.map((page, index) => {
                         return (
