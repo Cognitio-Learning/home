@@ -1,17 +1,13 @@
 import { NewsletterOptions } from "@/types/types";
 import {
     Body,
-    Button,
     Container,
-    Column,
     Head,
     Heading,
     Hr,
     Html,
     Img,
-    Link,
     Preview,
-    Row,
     Section,
     Text,
     Tailwind,
