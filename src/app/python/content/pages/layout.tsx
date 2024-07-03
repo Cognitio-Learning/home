@@ -7,7 +7,7 @@ export default function MDXLayout({ children }: Readonly<{ children: React.React
         <>
 
             <div className="text-white pt-24 h-auto w-screen justify-center items-center flex ">
-                <div className="lg:w-1/2 prose prose-neutral dark:prose-invert p-6">
+                <div className="lg:w-1/2 prose prose-neutral prose-invert p-6">
                     {children}
                 </div>
             </div>
