@@ -24,7 +24,7 @@ export const metadata: Metadata = {
     description: "Cognitio Learning is a platform developed by high schoolers to teach the next generation the fundamentals of computer science and programming.",
     images: [
       {
-        url: `${process.env.NEXT_PUBLIC_BASE_URL}/og-image.png`,
+        url: `/og-image.png`,
         width: 1200,
         height: 630,
         alt: "Cognitio Learning",
