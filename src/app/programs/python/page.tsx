@@ -121,7 +121,7 @@ export default function Python() {
                 <div className="flex flex-col items-center gap-20 w-full md:w-3/4 lg:w-1/2">
                     <div className="">
                         <h2 className="text-2xl font-semibold mt-8 lg:mt-0">Intro to Python for AI</h2>
-                        <p className="text-lg text-body-text tracking-tight mt-4  ">Through this bootcamp, students will learn the basics of python, basic AI concepts, implementation of AI, and the essentials of fullstack web development. Students will develop critical thinking skills, problem solving skills, and most importantly creatvitiy. </p>
+                        <p className="text-lg text-body-text tracking-tight mt-4  ">Through this bootcamp, students will learn the basics of python, basic AI concepts, and implementation of AI. Students will develop critical thinking skills, problem solving skills, and most importantly creatvitiy. </p>
                     </div>
                     <Accordion type="multiple" className="w-full" >
                         <AccordionItem value="item-1">
@@ -130,7 +130,7 @@ export default function Python() {
                                 This section introduces participants to the bootcamp, outlining its goals and benefits, especially focusing on the advantages of learning and implementing AI. Participants will then dive into the basics of Python, covering fundamental concepts and building a strong foundation in programming. View day-by-day curriculum <Link href='/programs/python/content' className="text-blue-500">here</Link>.
                             </AccordionContent>
                         </AccordionItem>
-                        <AccordionItem value="item-2">
+                        {/* <AccordionItem value="item-2">
                             <AccordionTrigger> Introduction to AI and Implementation</AccordionTrigger>
                             <AccordionContent>
                                 This section introduces participants to AI concepts and how to implement them using Python. Participants will learn the basics of machine learning and AI, explore different AI models, and implement simple AI algorithms. View day-by-day curriculum <Link href='/programs/python/content' className="text-blue-500">here</Link>.
@@ -141,7 +141,7 @@ export default function Python() {
                             <AccordionContent>
                                 This section introduces participants to the basics of HTML and fullstack web development. Participants will learn how to create a simple web application that takes user input, processes it with a backend AI model, and displays the response on the web page. View day-by-day curriculum <Link href='/programs/python/content' className="text-blue-500">here</Link>.
                             </AccordionContent>
-                        </AccordionItem>
+                        </AccordionItem> */}
                     </Accordion>
                 </div>
                 <div className="mt-20 lg:w-1/2 flex flex-col items-center" id="signup">

@@ -76,7 +76,7 @@ export default function About() {
             <div className='flex justify-center text-center flex-col items-center w-full lg:w-1/3'>
                 <h1 className='text-body-text font-semibold text-md uppercase'>Our Story</h1>
                 <h3 className='text-2xl lg:text-3xl text-white font-semibold leading-tight'>The story of Cognitio Learning</h3>
-                <p className='text-body-text leading-loose pt-8'>The spark for Cognitio Learning ignited from a personal realization. While discovering a passion for programming later in life, we recognized the immense potential impact of an early exposure to programming. Countless young minds possess the curiosity and aptitude to excel, but often lack the opportunity to discover them at a crucial developmental stage. Driven by this belief, we've dedicated ourselves to bridging this gap, ensuring that the next generation has the chanace to explore the exciting possibilities of technology from a young age.</p>
+                <p className='text-body-text leading-loose pt-8'>The spark for Cognitio Learning ignited from a personal realization. While discovering a passion for programming later in life, we recognized the immense potential impact of an early exposure to programming. Countless young minds possess the curiosity and aptitude to excel, but often lack the opportunity to discover them at a crucial developmental stage. Driven by this belief, we've dedicated ourselves to bridging this gap, ensuring that the next generation has the chance to explore the exciting possibilities of technology from a young age.</p>
             </div>
             
             {/* Team section */}

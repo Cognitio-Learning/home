@@ -11,12 +11,13 @@ import { motion } from 'framer-motion'
 import Motion from "@/components/homeMotion";
 
 const inter = Inter({ subsets: ["latin"] });
-const imageUrl = process.env.NODE_ENV === 'production'
-  ? 'https://cognitiolearning.com/og-image.png'
-  : '/og-image.png';
+const baseUrl = process.env.NODE_ENV === 'production'
+  ? 'https://cognitiolearning.com'
+  : 'http://localhost:3000';
 
 export const metadata: Metadata = {
   title: "Cognitio Learning",
+  metadataBase: new URL(baseUrl),
   description: "Cognitio Learning is a platform for learning and teaching.",
   openGraph: {
     type: "website",
@@ -27,7 +28,7 @@ export const metadata: Metadata = {
     description: "Cognitio Learning is a platform developed by high schoolers to teach the next generation the fundamentals of computer science and programming.",
     images: [
       {
-        url: imageUrl,
+        url: '/og-image.png',
         width: 1200,
         height: 630,
         alt: "Cognitio Learning",
