@@ -14,6 +14,7 @@ const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "Cognitio Learning",
+  description: "Cognitio Learning is a platform for learning and teaching.",
 };
 
 export default function RootLayout({
