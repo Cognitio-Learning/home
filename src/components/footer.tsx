@@ -1,4 +1,4 @@
-import { IconMail } from '@tabler/icons-react'
+import { IconBrandGithub, IconBrandGithubFilled, IconBrandInstagram, IconMail } from '@tabler/icons-react'
 import Image from 'next/image'
 import Link from 'next/link'
 import React from 'react'
@@ -17,7 +17,11 @@ export default function Footer() {
 
                 <div className="flex flex-col  text-white p-8 items-center w-full">
                     <h1 className="text-xl lg:text-4xl font-bold hidden lg:block">Contact Us</h1>
-                    <Link href="mailto:contact.cognitiolearning@gmail.com"><IconMail stroke={2} size={36} className="hover:cursor-pointer" /></Link>
+                    <div className='flex gap-4'>
+                        <Link href="mailto:contact.cognitiolearning@gmail.com"><IconMail stroke={2} size={36} className="hover:cursor-pointer" /></Link>
+                        <Link href="https://www.instagram.com/cognitio.learning"><IconBrandInstagram stroke={2} size={36} className="hover:cursor-pointer" /></Link>
+                        <Link href="https://github.com/Cognitio-Learning"><IconBrandGithubFilled stroke={2} size={36} color="black" className="hover:cursor-pointer bg-white rounded-full py-1 pb-0" /></Link>
+                    </div>
                 </div>
             </div>
         </div>
