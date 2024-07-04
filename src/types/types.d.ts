@@ -13,3 +13,10 @@ export interface FormValues {
 export interface NewsletterOptions {
     email: string
 }
+
+export interface ContactUsOptions {
+    email: string,
+    firstName: string,
+    lastName: string,
+    message: string,
+}

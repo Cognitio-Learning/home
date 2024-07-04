@@ -158,7 +158,7 @@ export default function Home() {
             <h2 className="text-xl font-bold">Intro to Python for AI</h2>
             <p className="text-body-text w-3/4">Learn the basics of Python and AI in this introductory course. Perfect for beginners!</p>
             <div className="flex mt-4">
-              <Link href="/python"><Button>Get Started</Button></Link>
+              <Link href="/programs/python"><Button>Get Started</Button></Link>
             </div>
           </BackgroundGradient>
         </div>

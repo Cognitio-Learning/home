@@ -104,15 +104,14 @@ export default function Python() {
             <div className="flex justify-center gap-8 flex-col lg:flex-row lg:px-8 items-center mb-20 h-screen">
                 <div className="w-full lg:w-[35rem]">
                     <h1 className="text-4xl font-bold">Intro to Python for AI</h1>
-                    <p className="text-lg text-body-text tracking-tight mt-4">Welcome to &quot;Intro to Python for AI,&quot; a <span className="text-white font-semibold">beginner-friendly course</span> designed to introduce young learners to the exciting world of programming and AI. This bootcamp is perfect for kids aged <span className="text-white font-semibold">8-14</span> who are eager to explore the basics of Python and how it can be used to create intelligent.</p>
-                    <p className="font-semibold text-lg mt-4">Course Dates: TBD</p>
+                    <p className="text-lg text-body-text tracking-tight mt-4">Welcome to &quot;Intro to Python for AI,&quot; a 5 day <span className="text-white font-semibold">beginner-friendly course</span> designed to introduce young learners to the exciting world of programming and AI. This bootcamp is perfect for kids aged <span className="text-white font-semibold">8-14</span> who are eager to explore the basics of Python and how it can be used to create intelligent.</p>
+                    <p className="font-semibold text-lg mt-4">Course Dates: 7/15 - 7/19</p>
                     <p className="font-semibold text-lg">Cost: FREE</p>
-
+                    <p className="font-semibold text-lg">Age Group: 8-14</p>
                     <div className="flex gap-4">
                         <Link href="#signup"><button className="bg-primary py-2 px-6 mt-10 lg:mt-20 font-semibold rounded-lg hover:opacity-80">Register Now</button></Link>
-                        <Link href="/python/content"><button className="bg-secondary-bg py-2 px-6 mt-10 lg:mt-20 font-semibold rounded-lg hover:opacity-80">View Content</button></Link>
+                        <Link href="/programs/python/content"><button className="bg-secondary-bg py-2 px-6 mt-10 lg:mt-20 font-semibold rounded-lg hover:opacity-80">View Content</button></Link>
                     </div>
-
                 </div>
                 <Image src="/svg/teaching.svg" width={500} height={100} alt="teaching" className="w-2/3 lg:w-[40rem] hidden lg:block" />
             </div>
@@ -128,19 +127,19 @@ export default function Python() {
                         <AccordionItem value="item-1">
                             <AccordionTrigger>Introduction and Basics of Python</AccordionTrigger>
                             <AccordionContent>
-                                This section introduces participants to the bootcamp, outlining its goals and benefits, especially focusing on the advantages of learning and implementing AI. Participants will then dive into the basics of Python, covering fundamental concepts and building a strong foundation in programming. View day-by-day curriculum <Link href='/python/content' className="text-blue-500">here</Link>.
+                                This section introduces participants to the bootcamp, outlining its goals and benefits, especially focusing on the advantages of learning and implementing AI. Participants will then dive into the basics of Python, covering fundamental concepts and building a strong foundation in programming. View day-by-day curriculum <Link href='/programs/python/content' className="text-blue-500">here</Link>.
                             </AccordionContent>
                         </AccordionItem>
                         <AccordionItem value="item-2">
                             <AccordionTrigger> Introduction to AI and Implementation</AccordionTrigger>
                             <AccordionContent>
-                                This section introduces participants to AI concepts and how to implement them using Python. Participants will learn the basics of machine learning and AI, explore different AI models, and implement simple AI algorithms. View day-by-day curriculum <Link href='/python/content' className="text-blue-500">here</Link>.
+                                This section introduces participants to AI concepts and how to implement them using Python. Participants will learn the basics of machine learning and AI, explore different AI models, and implement simple AI algorithms. View day-by-day curriculum <Link href='/programs/python/content' className="text-blue-500">here</Link>.
                             </AccordionContent>
                         </AccordionItem>
                         <AccordionItem value="item-3">
                             <AccordionTrigger>Basics of Fullstack and AI Backend</AccordionTrigger>
                             <AccordionContent>
-                                This section introduces participants to the basics of HTML and fullstack web development. Participants will learn how to create a simple web application that takes user input, processes it with a backend AI model, and displays the response on the web page. View day-by-day curriculum <Link href='/python/content' className="text-blue-500">here</Link>.
+                                This section introduces participants to the basics of HTML and fullstack web development. Participants will learn how to create a simple web application that takes user input, processes it with a backend AI model, and displays the response on the web page. View day-by-day curriculum <Link href='/programs/python/content' className="text-blue-500">here</Link>.
                             </AccordionContent>
                         </AccordionItem>
                     </Accordion>
