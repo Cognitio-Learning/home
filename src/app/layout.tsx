@@ -12,7 +12,7 @@ import Motion from "@/components/homeMotion";
 
 const inter = Inter({ subsets: ["latin"] });
 const imageUrl = process.env.NODE_ENV === 'production'
-  ? 'https://cognitio-learning.com/og-image.png'
+  ? 'https://cognitiolearning.com/og-image.png'
   : '/og-image.png';
 
 export const metadata: Metadata = {
