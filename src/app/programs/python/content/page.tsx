@@ -5,22 +5,22 @@ export default function Content() {
 
     const pages = [
         {
-            href: "/python/content/pages/day-1",
+            href: "/programs/python/content/pages/day-1",
             title: "Day 1: Introduction to Python",
             description: "Learn the basics of Python programming language.",
         },
         {
-            href: "/python/content/pages/day-2",
+            href: "/programs/python/content/pages/day-2",
             title: "Day 2: Python Control Structures",
             description: "Learn about loops and conditional statements in Python.",
         },
         {
-            href: "/python/content/pages/day-3",
+            href: "/programs/python/content/pages/day-3",
             title: "Day 3: Functions and Modules",
             description: "Learn about functions and modules in Python.",
         },
         {
-            href: "/python/content/pages/day-4",
+            href: "/programs/python/content/pages/day-4",
             title: "Day 4: Introduction to AI concepts",
             description: "Learn about AI concepts",
         }
