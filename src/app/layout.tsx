@@ -11,6 +11,9 @@ import { motion } from 'framer-motion'
 import Motion from "@/components/homeMotion";
 
 const inter = Inter({ subsets: ["latin"] });
+const imageUrl = process.env.NODE_ENV === 'production'
+  ? 'https://cognitio-learning.com/og-image.png'
+  : '/og-image.png';
 
 export const metadata: Metadata = {
   title: "Cognitio Learning",
@@ -24,7 +27,7 @@ export const metadata: Metadata = {
     description: "Cognitio Learning is a platform developed by high schoolers to teach the next generation the fundamentals of computer science and programming.",
     images: [
       {
-        url: `/og-image.png`,
+        url: imageUrl,
         width: 1200,
         height: 630,
         alt: "Cognitio Learning",
