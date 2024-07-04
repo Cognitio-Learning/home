@@ -15,6 +15,22 @@ const inter = Inter({ subsets: ["latin"] });
 export const metadata: Metadata = {
   title: "Cognitio Learning",
   description: "Cognitio Learning is a platform for learning and teaching.",
+  openGraph: {
+    type: "website",
+    locale: "en_US",
+    url: "https://cognitio-learning.com",
+    siteName: "Cognitio Learning",
+    title: "Cognitio Learning",
+    description: "Cognitio Learning is a platform for learning and teaching.",
+    images: [
+      {
+        url: "/metadata_image.png",
+        width: 1200,
+        height: 630,
+        alt: "Cognitio Learning",
+      },
+    ],
+  }
 };
 
 export default function RootLayout({
