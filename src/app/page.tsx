@@ -106,7 +106,7 @@ export default function Home() {
             <p className="text-md">Our carefully designed curriculum makes learning to code simple and fun. With step-by-step instructions and interactive exercises, kids can learn at ease, building confidence as they go.</p>
           </div>
           <div className="lg:w-7/12 flex lg:justify-end">
-            <Image src="/mockup1.png" width={600} height={400} alt="mockup" className="rounded-xl" sizes="(max-width: 640px) 100vw, 50vw" />
+            <Image src="/mockup1.png" width={600} height={400} alt="mockup" className="rounded-xl shadow-lg" sizes="(max-width: 640px) 100vw, 50vw" />
           </div>
         </div>
 
@@ -116,7 +116,7 @@ export default function Home() {
             <p className="text-md lg:text-start">We introduce children to the fascinating world of artificial intelligence through fun and practical projects. From creating chatbots to exploring machine learning, we bring AI concepts to life in an accessible way.</p>
           </div>
           <div className="lg:w-7/12">
-            <Image src="/mockup2.png" width={600} height={400} alt="mockup" className="rounded-xl" sizes="(max-width: 640px) 100vw, 50vw" />
+            <Image src="/mockup2.png" width={600} height={400} alt="mockup" className="rounded-xl shadow-lg" sizes="(max-width: 640px) 100vw, 50vw" />
           </div>
         </div>
 
