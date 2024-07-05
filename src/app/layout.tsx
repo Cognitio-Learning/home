@@ -18,7 +18,7 @@ const baseUrl = process.env.NODE_ENV === 'production'
 export const metadata: Metadata = {
   title: "Cognitio Learning",
   metadataBase: new URL(baseUrl),
-  description: "Cognitio Learning is a platform for learning and teaching.",
+  description: "Cognitio Learning is a platform developed by high schoolers to teach the next generation the fundamentals of computer science and programming.",
   openGraph: {
     type: "website",
     locale: "en_US",
