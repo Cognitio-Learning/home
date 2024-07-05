@@ -108,6 +108,7 @@ export default function Python() {
                     <p className="font-semibold text-lg mt-4">Course Dates: 7/15 - 7/19</p>
                     <p className="font-semibold text-lg">Cost: FREE</p>
                     <p className="font-semibold text-lg">Age Group: 8-14</p>
+                    <p className="text-lg">Further updates will be released on <Link href='/#newsletter'>our newsletter!</Link></p>
                     <div className="flex gap-4">
                         <Link href="#signup"><button className="bg-primary py-2 px-6 mt-10 lg:mt-20 font-semibold rounded-lg hover:opacity-80">Register Now</button></Link>
                         <Link href="/programs/python/content"><button className="bg-secondary-bg py-2 px-6 mt-10 lg:mt-20 font-semibold rounded-lg hover:opacity-80">View Content</button></Link>
@@ -117,7 +118,7 @@ export default function Python() {
             </div>
             <Link href="#about" className="-mt-[10rem]"><IconChevronDown size={32} className=" animate-bounce" /></Link>
             <div className="pt-20 lg:pt-[15rem] pb-20 justify-center flex flex-col lg:items-center w-full" id="about">
-                <h1 className="font-bold text-3xl">Course Structure</h1>
+                <h2 className="font-bold text-3xl">Course Structure</h2>
                 <div className="flex flex-col items-center gap-20 w-full md:w-3/4 lg:w-1/2">
                     <div className="">
                         <h2 className="text-2xl font-semibold mt-8 lg:mt-0">Intro to Python for AI</h2>
@@ -148,7 +149,7 @@ export default function Python() {
                     <div className="w-full flex gap-4">
                         <Image src="/svg/signup.svg" width={100} height={100} alt="teaching" className="w-1/2 hidden lg:block" />
                         <div className="lg:w-1/2 w-full flex flex-col items-center">
-                            <h1 className="font-bold text-3xl mb-4">Sign Up</h1>
+                            <h2 className="font-bold text-3xl mb-4">Sign Up</h2>
                             <Form {...form}>
                                 <form onSubmit={form.handleSubmit(onSubmit)} className="flex flex-col gap-4 w-full">
                                     <div className="flex flex-col gap-4 w-full">
