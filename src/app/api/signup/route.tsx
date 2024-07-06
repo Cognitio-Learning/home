@@ -2,11 +2,22 @@ import { JWT } from 'google-auth-library'
 import { GoogleSpreadsheet } from 'google-spreadsheet'
 import { NextRequest, NextResponse } from "next/server";
 import { FormValues } from "@/types/types";
+import { Resend } from 'resend';
 
 const sheetId = '1iceZCqPn1GETXZB5AfLvTeIeLnYkMQ-TjRWyiSNtRTg';
-
+const resend = new Resend(process.env.resend_key)
 export async function POST(req: NextRequest) {
     const data: FormValues = await req.json()
+
+    const email = data.parentsEmail;
+    const contact = await resend.contacts.create({
+        email: email,
+        audienceId: process.env.audience_id!
+    }).catch(e => {
+        console.error(e)
+        return NextResponse.json({ message: "Failed" }, { status: 500 })
+    })
+
     const SCOPES = [
         'https://www.googleapis.com/auth/spreadsheets',
     ]
@@ -21,7 +32,10 @@ export async function POST(req: NextRequest) {
     await doc.loadInfo()
     const sheet = doc.sheetsByIndex[0]
     const newRow = Object.values(data);
-    await sheet.addRow(newRow);
+    await sheet.addRow(newRow).catch(e => {
+        console.error(e)
+        return NextResponse.json({ message: "Failed" }, { status: 500 })
+    })
 
     return NextResponse.json({ message: "Success" }, { status: 200 })
 }
