@@ -105,8 +105,7 @@ export default function Python() {
                 <div className="w-full lg:w-[35rem]">
                     <h1 className="text-4xl font-bold">Intro to Python for AI</h1>
                     <p className="text-lg text-body-text tracking-tight mt-4">Welcome to &quot;Intro to Python for AI,&quot; a 5 day <span className="text-white font-semibold">beginner-friendly course</span> designed to introduce young learners to the exciting world of programming and AI. This bootcamp is perfect for kids aged <span className="text-white font-semibold">8-14</span> who are eager to explore the basics of Python and how it can be used to create intelligent.</p>
-                    <p className="font-semibold text-lg mt-4">Course Dates: 7/15 - 7/19</p>
-                    <p className="font-semibold text-lg">Cost: FREE</p>
+                    <p className="font-semibold text-lg mt-4">Cost: FREE</p>
                     <p className="font-semibold text-lg">Age Group: 8-14</p>
                     <p className="text-lg">Further updates will be released on <Link href='/#newsletter'>our newsletter!</Link></p>
                     <div className="flex gap-4">
@@ -123,6 +122,12 @@ export default function Python() {
                     <div className="">
                         <h2 className="text-2xl font-semibold mt-8 lg:mt-0">Intro to Python for AI</h2>
                         <p className="text-lg text-body-text tracking-tight mt-4  ">Through this bootcamp, students will learn the basics of python, basic AI concepts, and implementation of AI. Students will develop critical thinking skills, problem solving skills, and most importantly creatvitiy. </p>
+                        <p className="font-semibold text-lg mt-4">Course Dates: 7/15 - 7/19</p>
+                        <p className="font-semibold text-lg">Time: 4PM - 5:30PM</p>
+                        <p className="font-semibold text-lg">Location: Online</p>
+                        <p className="text-body-text">Links will be sent out through our newsletter!</p>
+
+                    
                     </div>
                     <Accordion type="multiple" className="w-full" >
                         <AccordionItem value="item-1">
