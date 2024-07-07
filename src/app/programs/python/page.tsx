@@ -97,17 +97,13 @@ export default function Python() {
         }).then(res => res.json()).then(data => {
             if(data.message === 'Success') {
                 setRegistered(true)
+                form.reset({})
             } else {
                 setRegistered(false)
             }
         })
     }
 
-    useEffect(() => {
-        if(form.formState.isSubmitSuccessful) {
-            form.reset({})
-        }
-    }, [form.formState, form.reset])
 
     return (
         <div className="flex flex-col items-center justify-center w-screen text-white p-3">

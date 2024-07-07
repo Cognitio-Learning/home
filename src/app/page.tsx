@@ -52,15 +52,10 @@ export default function Home() {
       if (data.message === "Success") {
         setSubscribed(true)
         setLoading(false)
+        form.reset({})
       }
     })
   }
-
-  useEffect(() => {
-    if (form.formState.isSubmitSuccessful) {
-      form.reset({})
-    }
-  }, [form.formState, form.reset])
 
   return (
     <main className="flex min-h-screen text-white flex-col items-center justify-between w-screen p-4">
