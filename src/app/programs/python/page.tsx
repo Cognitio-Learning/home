@@ -71,8 +71,20 @@ export default function Python() {
 
     const form = useForm<z.infer<typeof formSchema>>({
         resolver: zodResolver(formSchema),
-
+        defaultValues: {
+            firstName: '',
+            lastName: '',
+            grade: 4,
+            kidsEmail: '',
+            parentsPhone: '',
+            parentFirstName: '',
+            parentLastName: '',
+            parentsEmail: '',
+            heardFrom: ''
+        }
     })
+
+    const [registered, setRegistered] = useState(false)
 
     const onSubmit = (data: z.infer<typeof formSchema>) => {
         setRegistered(false)
@@ -90,8 +102,6 @@ export default function Python() {
             }
         })
     }
-
-    const [registered, setRegistered] = useState(false)
 
     useEffect(() => {
         if(form.formState.isSubmitSuccessful) {
