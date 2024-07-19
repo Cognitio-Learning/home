@@ -1,7 +1,7 @@
 import { NextRequest, NextResponse } from "next/server";
 import { NewsletterOptions } from "@/types/types";
 import { Resend } from 'resend'
-import WelcomeEmail from "../../../../emails/welcome";
+import WelcomeEmail from "../../../../../emails/welcome";
 
 const resend = new Resend(process.env.resend_key)
 

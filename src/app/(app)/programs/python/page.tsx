@@ -161,7 +161,8 @@ export default function Python() {
                         <Image src="/svg/signup.svg" width={100} height={100} alt="teaching" className="w-1/2 hidden lg:block" />
                         <div className="lg:w-1/2 w-full flex flex-col items-center">
                             <h2 className="font-bold text-3xl mb-4">Sign Up</h2>
-                            <Form {...form}>
+                            <p className="tracking-wide leading-7 text-center text-body-text">Sign ups have been officially closed for 2024. Thank you to everyone who participated! We'll be hosting similar bootcamps next summer. Join our newsletter to stay updated!</p>
+                            {/* <Form {...form}>
                                 <form onSubmit={form.handleSubmit(onSubmit)} className="flex flex-col gap-4 w-full">
                                     <div className="flex flex-col gap-4 w-full">
                                         <div className="grow flex gap-4 w-full">
@@ -302,7 +303,7 @@ export default function Python() {
                                         registered && <p className="text-green-500">Successfully registered!</p>
                                     }
                                 </form>
-                            </Form>
+                            </Form> */}
                         </div>
                     </div>
                 </div>
