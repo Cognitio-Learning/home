@@ -22,7 +22,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     locale: "en_US",
-    url: "https://cognitio-learning.com",
+    url: "https://cognitiolearning.com",
     siteName: "Cognitio Learning",
     title: "Cognitio Learning: Simplified learning for the next generation.",
     description: "Cognitio Learning is a platform developed by high schoolers to teach the next generation the fundamentals of computer science and programming.",
