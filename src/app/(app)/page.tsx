@@ -7,11 +7,10 @@ import { Button } from "@/components/ui/shadcn/ui/button";
 import { IconAffiliate, IconBook, IconRocket } from "@tabler/icons-react";
 import Image from "next/image";
 import Link from "next/link";
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import { z } from "zod";
 import { zodResolver } from "@hookform/resolvers/zod"
 import { useForm } from "react-hook-form"
-import { motion } from "framer-motion"
 import {
   Form,
   FormControl,
