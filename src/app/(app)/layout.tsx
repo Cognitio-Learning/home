@@ -5,7 +5,6 @@ import "./globals.css";
 import NavBar from "@/components/navbar";
 import { cn } from "@/utils/cn";
 import Footer from "@/components/footer";
-import { GoogleAnalytics } from '@next/third-parties/google'
 import React from "react";
 import { motion } from 'framer-motion'
 import Motion from "@/components/homeMotion";
@@ -50,7 +49,6 @@ export default function RootLayout({
           {children}
           <Footer />
         </Motion>
-        <GoogleAnalytics gaId="G-9T66WJ0Z2G" />
       </body>
     </html>
   );
