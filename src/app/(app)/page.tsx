@@ -2,7 +2,6 @@
 
 import { BackgroundGradient } from "@/components/ui/ace/background-gradient";
 import { MacbookScroll } from "@/components/ui/ace/macbook";
-import { SparklesCore } from "@/components/ui/ace/sparkles";
 import { Button } from "@/components/ui/shadcn/ui/button";
 import { IconAffiliate, IconBook, IconRocket } from "@tabler/icons-react";
 import Image from "next/image";
@@ -58,32 +57,20 @@ export default function Home() {
 
   return (
     <main className="flex min-h-screen text-white flex-col items-center justify-between w-screen p-4">
-      <div className="h-screen w-full  flex flex-col items-center justify-center overflow-hidden rounded-md">
-        <h1 className="text-6xl lg:text-9xl font-bold text-center relative z-20">
-          Cognitio Learning
-        </h1>
-        <p className="text-xl lg:text-2xl font-bold mt-6 relative z-20 text-center">Simplified learning for the next generation.</p>
-        <div className="lg:w-[40rem] h-40 relative">
-          {/* Gradients */}
-          <div className="absolute inset-x-20 top-0 bg-gradient-to-r from-transparent via-indigo-500 to-transparent h-[2px] w-3/4 blur-sm" />
-          <div className="absolute inset-x-20 top-0 bg-gradient-to-r from-transparent via-indigo-500 to-transparent h-px w-3/4" />
-          <div className="absolute inset-x-60 top-0 bg-gradient-to-r from-transparent via-violet-500 to-transparent h-[5px] w-1/4 blur-sm" />
-          <div className="absolute inset-x-60 top-0 bg-gradient-to-r from-transparent via-violet-500 to-transparent h-px w-1/4" />
-
-          <SparklesCore
-            background="transparent"
-            minSize={0.4}
-            maxSize={1}
-            particleDensity={1200}
-            className="w-full h-full"
-            particleColor="#FFFFFF"
-          />
-
-          <div className="absolute inset-0 w-full h-full bg-main-bg [mask-image:radial-gradient(350px_200px_at_top,transparent_20%,white)]"></div>
+      <div className="flex flex-col items-center justify-center w-full h-screen">
+        <div className="flex flex-col items-center justify-center text-center">
+          <h1 className="text-4xl md:text-6xl font-bold mb-4">Welcome to Cognitio Learning</h1>
+          <p className="text-lg md:text-xl mb-8 max-w-2xl">Empowering young minds through innovative education in computer science and artificial intelligence.</p>
+          <div className="flex gap-4">
+            <Link href="/programs/python">
+              <Button className="bg-primary hover:opacity-80">Get Started</Button>
+            </Link>
+            <Link href="/about">
+              <Button variant="outline">Learn More</Button>
+            </Link>
+          </div>
         </div>
-        <Link className="font-semibold text-lg lg:text-xl bg-white rounded-lg p-4 text-black" href="#start">See what it&apos;s about.</Link>
       </div>
-
 
       <div className="w-full overflow-hidden hidden lg:block" id="start">
         <MacbookScroll
