@@ -9,7 +9,7 @@ import {
 import { IconChevronDown } from "@tabler/icons-react";
 import Image from "next/image";
 import Link from "next/link";
-import { useForm } from "react-hook-form";
+/* import { useForm } from "react-hook-form";
 import { zodResolver } from '@hookform/resolvers/zod';
 import { z } from "zod";
 
@@ -24,9 +24,9 @@ import {
 } from "@/components/ui/shadcn/ui/form"
 import { Input } from "@/components/ui/shadcn/ui/input"
 import { Textarea } from "@/components/ui/shadcn/ui/textarea";
-import { Button } from "@/components/ui/shadcn/ui/button";
-import React, { useEffect, useState } from "react";
-
+import { Button } from "@/components/ui/shadcn/ui/button"; */
+import React/*  { useEffect, useState }  */ from "react";
+/* 
 const formSchema = z.object({
     firstName: z.string()
         .min(2, {
@@ -65,11 +65,11 @@ const formSchema = z.object({
             message: "Invalid email address",
         }),
     heardFrom: z.string()
-})
+}) */
 
 export default function Python() {
 
-    const form = useForm<z.infer<typeof formSchema>>({
+    /* const form = useForm<z.infer<typeof formSchema>>({
         resolver: zodResolver(formSchema),
         defaultValues: {
             firstName: '',
@@ -84,9 +84,9 @@ export default function Python() {
         }
     })
 
-    const [registered, setRegistered] = useState(false)
+    const [registered, setRegistered] = useState(false) */
 
-    const onSubmit = (data: z.infer<typeof formSchema>) => {
+    /* const onSubmit = (data: z.infer<typeof formSchema>) => {
         setRegistered(false)
         fetch('/api/signup', {
             method: 'POST',
@@ -102,7 +102,7 @@ export default function Python() {
                 setRegistered(false)
             }
         })
-    }
+    } */
 
 
     return (
@@ -161,7 +161,8 @@ export default function Python() {
                         <Image src="/svg/signup.svg" width={100} height={100} alt="teaching" className="w-1/2 hidden lg:block" />
                         <div className="lg:w-1/2 w-full flex flex-col items-center">
                             <h2 className="font-bold text-3xl mb-4">Sign Up</h2>
-                            <Form {...form}>
+                            <p className="tracking-wide leading-7 text-center text-body-text">Sign ups have been officially closed for 2024. Thank you to everyone who participated! We&apos;ll be hosting similar bootcamps next summer. Join our newsletter to stay updated!</p>
+                            {/* <Form {...form}>
                                 <form onSubmit={form.handleSubmit(onSubmit)} className="flex flex-col gap-4 w-full">
                                     <div className="flex flex-col gap-4 w-full">
                                         <div className="grow flex gap-4 w-full">
@@ -302,7 +303,7 @@ export default function Python() {
                                         registered && <p className="text-green-500">Successfully registered!</p>
                                     }
                                 </form>
-                            </Form>
+                            </Form> */}
                         </div>
                     </div>
                 </div>
