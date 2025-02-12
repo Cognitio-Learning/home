@@ -1,50 +1,33 @@
-# Build stage
-FROM oven/bun:1 AS builder
-
+# Stage 1: Build the app
+FROM oven/bun:latest AS builder
 WORKDIR /app
 
-# Copy package files
-COPY package*.json ./
+# Copy dependency definitions for caching.
+COPY package.json ./
+# If you have a Bun lock file (bun.lockb), uncomment the following line:
+# COPY bun.lockb ./
 
-# Install dependencies without frozen lockfile first time
+# Install dependencies with Bun.
 RUN bun install
 
-# Copy all files
+# Copy the rest of the source code.
 COPY . .
 
-# Build the application
+# Build the Next.js project.
 RUN bun run build
 
-# Production stage
-FROM oven/bun:1-slim AS runner
-
+# Stage 2: Run the app
+FROM oven/bun:latest
 WORKDIR /app
 
-# Set to production environment
-ENV NODE_ENV production
+# Copy the built files from the builder stage.
+COPY --from=builder /app ./
 
-# Create non-root user for security
-RUN addgroup --system --gid 1001 bunjs
-RUN adduser --system --uid 1001 nextjs
+# Set the environment to production.
+ENV NODE_ENV=production
 
-# Copy necessary files from builder
-COPY --from=builder /app/public ./public
-COPY --from=builder /app/.next/standalone ./
-COPY --from=builder /app/.next/static ./.next/static
-COPY --from=builder /app/package.json ./package.json
-
-# Set correct permissions
-RUN chown -R nextjs:bunjs /app
-
-# Switch to non-root user
-USER nextjs
-
-# Expose port
+# Expose the Next.js default port.
 EXPOSE 3000
 
-# Set hostname
-ENV HOSTNAME "0.0.0.0"
-ENV PORT 3000
-
-# Start the application
-CMD ["bun", "server.js"]
+# Start the production server using Bun to run the defined start script.
+CMD ["bun", "run", "start"]
