@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      body {
+        background-color: white;
+        font-family: Arial, sans-serif;
+        padding: 8px;
+      }
+      .container {
+        border: 1px solid #eaeaea;
+        border-radius: 4px;
+        margin: 40px auto;
+        padding: 20px;
+        max-width: 465px;
+      }
+      .heading {
+        color: black;
+        font-size: 24px;
+        font-weight: normal;
+        padding: 0;
+        margin: 30px 0;
+      }
+      .text {
+        color: black;
+        font-size: 14px;
+        line-height: 24px;
+      }
+      .hr {
+        border: 1px solid #eaeaea;
+        margin: 26px 0;
+        width: 100%;
+      }
+      .email-link {
+        color: #3b82f6;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1 class="heading">
+        Message from: <strong>{{ .Data.content.firstName }} {{ .Data.content.lastName }}</strong>
+      </h1>
+      
+      <p class="text">
+        {{ .Data.content.message }}
+      </p>
+      
+      <p class="text">
+        Email: <strong>{{ .Data.content.email }}</strong>
+      </p>
+      <hr class="hr" />
+      <p class="text">
+        - Cognitio Contact Form
+      </p>
+      <hr class="hr" />
+    </div>
+    {{ template "content" . }}
+    {{ TrackView }}
+  </body>
+</html> 

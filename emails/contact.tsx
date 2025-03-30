@@ -1,4 +1,4 @@
-import { ContactUsOptions, NewsletterOptions } from "@/types/types";
+import { ContactUsOptions } from "@/types/types";
 import {
     Body,
     Container,

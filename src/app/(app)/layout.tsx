@@ -1,4 +1,3 @@
-
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
@@ -6,8 +5,8 @@ import NavBar from "@/components/navbar";
 import { cn } from "@/utils/cn";
 import Footer from "@/components/footer";
 import React from "react";
-import { motion } from 'framer-motion'
 import Motion from "@/components/homeMotion";
+import { ThemeProvider } from "@/components/theme-provider";
 
 const inter = Inter({ subsets: ["latin"] });
 const baseUrl = process.env.NODE_ENV === 'production'
@@ -42,13 +41,17 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={cn("scroll-smooth  bg-main-bg", inter.className)}>
-      <body className={cn('relative w-full flex flex-col items-center justify-center')}>
-        <NavBar className="top-2" />
-        <Motion>
-          {children}
-          <Footer />
-        </Motion>
+    <html lang="en" className={cn("scroll-smooth antialiased", inter.className)} suppressHydrationWarning>
+      <body className={cn('w-full min-h-screen')}>
+        <ThemeProvider attribute="class" defaultTheme="system" enableSystem disableTransitionOnChange>
+          <NavBar />
+          <Motion>
+            <main className="">
+              {children}
+            </main>
+            <Footer />
+          </Motion>
+        </ThemeProvider>
       </body>
     </html>
   );

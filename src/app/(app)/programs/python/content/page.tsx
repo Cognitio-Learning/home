@@ -40,10 +40,10 @@ export default function Content() {
                                     className=' border border-black bg-zinc-950 rounded-xl hover:bg-zinc-900 w-[20rem]'
                                 >
                                     <div className="flex basis-full flex-col p-4 tracking-tight text-slate-100/50 sm:basis-1/2 w-full" >
-                                        <h3 className=" !pb-2 !m-0 font-bold  text-base text-slate-100">
+                                        <h3 className=" pb-2! m-0! font-bold  text-base text-slate-100">
                                             {page.title}
                                         </h3>
-                                        <div className="text-base !m-0 pb-4 font-normal">
+                                        <div className="text-base m-0! pb-4 font-normal">
                                             <span className="text-slate-500">
                                                 {page.description}
                                             </span>

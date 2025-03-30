@@ -68,7 +68,7 @@ export const MacbookScroll = ({
     return (
         <div
             ref={ref}
-            className="min-h-[200vh]  flex flex-col items-center py-0 md:py-80 justify-start flex-shrink-0 [perspective:800px] transform md:scale-100  scale-[0.35] sm:scale-50"
+            className="min-h-[200vh]  flex flex-col items-center py-0 md:py-80 justify-start shrink-0 [perspective:800px] transform md:scale-100  scale-[0.35] sm:scale-50"
         >
             <motion.h2
                 style={{
@@ -109,9 +109,9 @@ export const MacbookScroll = ({
                     </div>
                 </div>
                 <Trackpad />
-                <div className="h-2 w-20 mx-auto inset-x-0 absolute bottom-0 bg-gradient-to-t from-[#272729] to-[#050505] rounded-tr-3xl rounded-tl-3xl" />
+                <div className="h-2 w-20 mx-auto inset-x-0 absolute bottom-0 bg-linear-to-t from-[#272729] to-[#050505] rounded-tr-3xl rounded-tl-3xl" />
                 {showGradient && (
-                    <div className="h-40 w-full absolute bottom-0 inset-x-0 bg-gradient-to-t from-main-bg  via-main-bg to-transparent z-50"></div>
+                    <div className="h-40 w-full absolute bottom-0 inset-x-0 bg-linear-to-t from-main-bg  via-main-bg to-transparent z-50"></div>
                 )}
                 {badge && <div className="absolute bottom-4 left-4">{badge}</div>}
             </div>
@@ -248,7 +248,7 @@ export const Keypad = () => {
                     <span className="inline-block mt-1">F12</span>
                 </KBtn>
                 <KBtn>
-                    <div className="h-4 w-4 rounded-full  bg-gradient-to-b from-20% from-neutral-900 via-black via-50% to-neutral-900 to-95% p-px">
+                    <div className="h-4 w-4 rounded-full  bg-linear-to-b from-20% from-neutral-900 via-black via-50% to-neutral-900 to-95% p-px">
                         <div className="bg-black h-full w-full rounded-full" />
                     </div>
                 </KBtn>
@@ -592,7 +592,7 @@ export const KBtn = ({
 
 export const Row = ({ children }: { children: React.ReactNode }) => {
     return (
-        <div className="flex gap-[2px] mb-[2px] w-full flex-shrink-0">
+        <div className="flex gap-[2px] mb-[2px] w-full shrink-0">
             {children}
         </div>
     );
