@@ -7,6 +7,6 @@ export default function robots(): MetadataRoute.Robots {
             allow: '/',
             disallow: ['/donations/', '/team/'],
         },
-        sitemap: 'https://cognitiolearning.com/sitemap.xml',
+        sitemap: 'https://cognitiolearning.org/sitemap.xml',
     }
 }

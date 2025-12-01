@@ -16,7 +16,7 @@ export async function POST(req: NextRequest) {
 
     let { error } = await resend.emails.send({
         subject: "New message from Cognitio Contact",
-        from: "Cognitio <contact@messages.cognitiolearning.com>",
+        from: "Cognitio <contact@messages.cognitiolearning.org>",
         to: "contact.cognitiolearning@gmail.com",
         react: ContactUsEmail({
             email,

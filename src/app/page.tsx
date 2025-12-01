@@ -1,7 +1,6 @@
 'use client'
 
-import { SparklesCore } from "@/components/ui/ace/sparkles";
-import { IconAffiliate, IconBook, IconRocket, IconSchool } from "@tabler/icons-react";
+import { IconAffiliate, IconRocket, IconSchool } from "@tabler/icons-react";
 import Image from "next/image";
 import Link from "next/link";
 import React, { useState } from "react";
@@ -85,16 +84,6 @@ export default function Home() {
 
         {/* Right Column - Visual */}
         <div className="relative bg-white flex items-center justify-center overflow-hidden border-t lg:border-t-0 border-black lg:border-l-0">
-             <div className="absolute inset-0 w-full h-full opacity-20">
-                <SparklesCore
-                    background="transparent"
-                    minSize={0.4}
-                    maxSize={1}
-                    particleDensity={400}
-                    className="w-full h-full"
-                    particleColor="#000000"
-                />
-             </div>
              
              {/* Abstract Network - Knowledge Graph */}
              <div className="relative z-10 w-full h-full p-8 flex items-center justify-center">

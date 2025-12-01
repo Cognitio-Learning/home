@@ -10,9 +10,8 @@ export async function POST(req: NextRequest) {
     const data: FormValues = await req.json()
 
     const email = data.parentsEmail;
-    const contact = await resend.contacts.create({
-        email: email,
-        audienceId: process.env.audience_id!
+    await resend.contacts.create({
+        email: email
     }).catch(e => {
         console.error(e)
         return NextResponse.json({ message: "Failed" }, { status: 500 })
