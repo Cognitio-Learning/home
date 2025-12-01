@@ -1,6 +1,6 @@
 
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Space_Grotesk } from "next/font/google";
 import "./globals.css";
 import NavBar from "@/components/navbar";
 import { cn } from "@/utils/cn";
@@ -10,7 +10,7 @@ import React from "react";
 import { motion } from 'framer-motion'
 import Motion from "@/components/homeMotion";
 
-const inter = Inter({ subsets: ["latin"] });
+const spaceGrotesk = Space_Grotesk({ subsets: ["latin"] });
 const baseUrl = process.env.NODE_ENV === 'production'
   ? 'https://cognitiolearning.com'
   : 'http://localhost:3000';
@@ -43,9 +43,9 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={cn("scroll-smooth  bg-main-bg", inter.className)}>
-      <body className={cn('relative w-full flex flex-col items-center justify-center')}>
-        <NavBar className="top-2" />
+    <html lang="en" className={cn("scroll-smooth bg-white", spaceGrotesk.className)}>
+      <body className={cn('relative w-full flex flex-col bg-white min-h-screen')}>
+        <NavBar />
         <Motion>
           {children}
           <Footer />

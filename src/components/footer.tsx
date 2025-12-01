@@ -1,29 +1,35 @@
 import { IconBrandGithubFilled, IconBrandInstagram, IconMail } from '@tabler/icons-react'
-import Image from 'next/image'
 import Link from 'next/link'
 import React from 'react'
 
 export default function Footer() {
     return (
-        <div className="w-full h-[15rem] lg:h-[30rem] bg-gradient-to-t from-black to-main-bg flex justify-center">
-            <div className="lg:w-2/3 w-full flex justify-between items-center flex-col lg:flex-row p-6">
-                <div className="flex flex-col gap-8 lg:flex-row items-center lg:justify-between w-full">
-                    <Image src="/svg/logo.svg" width={200} height={100} alt="logo" className="hidden lg:block" />
-                    <div className="flex flex-col items-center md:items-start text-white lg:p-8">
-                        <h1 className="text-xl lg:text-4xl font-bold text-center md:text-start">Cognitio Learning</h1>
-                        <p className="text-md lg:text-lg text-center">Simplified learning for the next generation.</p>
+        <footer className="w-full border-t border-black bg-white">
+            <div className="grid grid-cols-1 md:grid-cols-2">
+                <div className="p-12 border-r border-black flex flex-col justify-between h-full">
+                    <div>
+                         <h1 className="text-2xl font-bold tracking-tighter mb-2">Cognitio Learning</h1>
+                         <p className="text-sm text-gray-500">Simplified learning for the next generation.</p>
                     </div>
+                    <p className="text-xs text-gray-400 mt-8">© {new Date().getFullYear()} Cognitio Learning. All rights reserved.</p>
                 </div>
-
-                <div className="flex flex-col  text-white p-8 items-center w-full">
-                    <h1 className="text-xl lg:text-3xl font-bold hidden lg:block">Contact Us</h1>
-                    <div className='flex gap-4'>
-                        <Link href="mailto:contact.cognitiolearning@gmail.com"><IconMail stroke={2} size={36} className="hover:cursor-pointer" /></Link>
-                        <Link href="https://www.instagram.com/cognitio.learning"><IconBrandInstagram stroke={2} size={36} className="hover:cursor-pointer" /></Link>
-                        <Link href="https://github.com/Cognitio-Learning"><IconBrandGithubFilled stroke={2} size={36} color="black" className="hover:cursor-pointer bg-white rounded-full py-1 pb-0" /></Link>
-                    </div>
+                <div className="p-12 flex flex-col justify-center items-start md:items-start gap-8">
+                     <div className="flex flex-col gap-4">
+                        <h3 className="font-bold uppercase tracking-widest text-sm">Contact</h3>
+                        <Link href="mailto:contact.cognitiolearning@gmail.com" className="hover:text-purple-600 transition-colors flex items-center gap-2">
+                            <IconMail size={20} /> contact.cognitiolearning@gmail.com
+                        </Link>
+                     </div>
+                     <div className="flex gap-6 mt-4">
+                        <Link href="https://www.instagram.com/cognitio.learning" className="hover:text-purple-600 transition-colors">
+                            <IconBrandInstagram size={24} />
+                        </Link>
+                        <Link href="https://github.com/Cognitio-Learning" className="hover:text-purple-600 transition-colors">
+                            <IconBrandGithubFilled size={24} />
+                        </Link>
+                     </div>
                 </div>
             </div>
-        </div>
+        </footer>
     )
 }

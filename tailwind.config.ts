@@ -20,15 +20,25 @@ const config = {
       },
     },
     extend: {
+      fontFamily: {
+        sans: ["var(--font-inter)"],
+      },
+      fontWeight: {
+        light: '300',
+        normal: '400',
+        medium: '500',
+        semibold: '600',
+        bold: '700',
+      },
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
         "gradient-conic":
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
       },
       colors: {
-        'main-bg': '#0b0f19',
-        'secondary-bg': '#253455',
-        'body-text': '#a6a4a1',
+        'main-bg': '#ffffff',
+        'secondary-bg': '#f9fafb',
+        'body-text': '#374151',
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
         ring: "hsl(var(--ring))",

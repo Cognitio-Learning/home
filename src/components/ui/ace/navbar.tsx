@@ -27,7 +27,7 @@ export const MenuItem = ({
         <div onMouseEnter={() => setActive(item)} className="relative ">
             <motion.p
                 transition={{ duration: 0.3 }}
-                className="cursor-pointer  hover:opacity-[0.9] text-white font-semibold"
+                className="cursor-pointer hover:opacity-[0.7] text-black font-medium"
             >
                 {item}
             </motion.p>
@@ -42,7 +42,7 @@ export const MenuItem = ({
                             <motion.div
                                 transition={transition}
                                 layoutId="active" // layoutId ensures smooth animation
-                                className="bg-white dark:bg-black backdrop-blur-sm text-white rounded-2xl overflow-hidden border border-white/[0.2] shadow-xl"
+                                className="bg-white text-black rounded-2xl overflow-hidden border border-black/[0.1] shadow-xl"
                             >
                                 <motion.div
                                     layout // layout ensures smooth animation
@@ -69,12 +69,11 @@ export const Menu = ({
     return (
         <nav
             onMouseLeave={() => setActive(null)} // resets the state
-            className="relative rounded-full boder bg-gradient-to-r from-indigo-500 via-violet-500 to-indigo-500 border-white/[0.2]  shadow-input flex justify-center lg:justify-between items-center  "
+            className="relative rounded-full border bg-white border-black/10 shadow-sm flex justify-center lg:justify-between items-center"
         >
-            <Link className=" font-semibold text-neutral-50 mx-6 text-md md:text-lg hover:cursor-pointer" href="/">Cognitio Learning</Link>
+            <Link className="font-normal text-black mx-6 text-md md:text-lg hover:cursor-pointer" href="/">Cognitio Learning</Link>
             <div className="flex justify-center space-x-4 px-8 py-6 ">
                 {children}
-
             </div>
         </nav>
     );
@@ -85,7 +84,7 @@ export const HoveredLink = ({ children, ...rest }: any) => {
     return (
         <Link
             {...rest}
-            className="text-neutral-700 dark:text-neutral-200 hover:text-neutral-300 "
+            className="text-neutral-700 hover:text-black "
         >
             {children}
         </Link>

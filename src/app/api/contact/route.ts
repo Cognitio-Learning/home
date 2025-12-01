@@ -1,8 +1,8 @@
 import { NextRequest, NextResponse } from "next/server";
 import { ContactUsOptions } from "@/types/types";
 import { Resend } from 'resend'
-import WelcomeEmail from "../../../../../emails/welcome";
-import ContactUsEmail from "../../../../../emails/contact";
+import WelcomeEmail from "../../../../emails/welcome";
+import ContactUsEmail from "../../../../emails/contact";
 
 const resend = new Resend(process.env.resend_key)
 

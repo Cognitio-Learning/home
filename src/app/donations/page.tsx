@@ -4,7 +4,7 @@ import React from 'react';
 
 export default function Contact() {
     return (
-        <div className="flex flex-col justify-center items-center h-screen w-screen text-white p-6">
+        <div className="flex flex-col justify-center items-center h-screen w-screen text-gray-900 p-6">
             <Image src="/svg/thank_you.svg" alt="Contact Us" width={350} height={350} className='w-3/4 lg:w-[35rem]'/>
             <div className='w-full lg:w-[40rem] pt-20'>
                 <h1 className='font-bold text-3xl'>Make a donation!</h1>
