@@ -14,7 +14,7 @@ export async function POST(req: NextRequest) {
         message
     }: ContactUsOptions = await req.json()
 
-    let { error } = await resend.emails.send({
+    const { data, error } = await resend.emails.send({
         subject: "New message from Cognitio Contact",
         from: "Cognitio <contact@messages.cognitiolearning.org>",
         to: "contact.cognitiolearning@gmail.com",
@@ -25,8 +25,8 @@ export async function POST(req: NextRequest) {
             message
         })
     })
-    if (error) NextResponse.json({ message: "Failed" }, { status: 500 })
+    if (error) return NextResponse.json({ error }, { status: 500 })
 
-    return NextResponse.json({ message: "Success" }, { status: 200 })
+    return NextResponse.json({ data }, { status: 200 })
 }
 

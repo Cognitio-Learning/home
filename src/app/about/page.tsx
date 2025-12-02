@@ -122,7 +122,7 @@ export default function About() {
                                             <FormItem className="w-full">
                                                 <FormLabel className="text-xs font-bold uppercase tracking-widest text-gray-500">First Name</FormLabel>
                                                 <FormControl>
-                                                    <Input  {...field} className="bg-transparent border-b-2 border-gray-200 px-0 py-2 text-black focus:outline-none focus:border-purple-600 transition-colors rounded-none border-t-0 border-x-0 focus-visible:ring-0 placeholder:text-gray-300" placeholder="JANE" />
+                                                    <Input  {...field} className="uppercase bg-transparent border-b-2 border-gray-200 px-0 py-2 text-black focus:outline-none focus:border-purple-600 transition-colors rounded-none border-t-0 border-x-0 focus-visible:ring-0 placeholder:text-gray-300" placeholder="JANE" />
                                                 </FormControl>
                                                 <FormMessage />
                                             </FormItem>
@@ -135,7 +135,7 @@ export default function About() {
                                             <FormItem className="w-full">
                                                 <FormLabel className="text-xs font-bold uppercase tracking-widest text-gray-500">Last Name</FormLabel>
                                                 <FormControl>
-                                                    <Input {...field} className="bg-transparent border-b-2 border-gray-200 px-0 py-2 text-black focus:outline-none focus:border-purple-600 transition-colors rounded-none border-t-0 border-x-0 focus-visible:ring-0 placeholder:text-gray-300" placeholder="DOE" />
+                                                    <Input {...field} className="uppercase bg-transparent border-b-2 border-gray-200 px-0 py-2 text-black focus:outline-none focus:border-purple-600 transition-colors rounded-none border-t-0 border-x-0 focus-visible:ring-0 placeholder:text-gray-300" placeholder="DOE" />
                                                 </FormControl>
                                                 <FormMessage />
                                             </FormItem>
@@ -149,7 +149,7 @@ export default function About() {
                                         <FormItem className="w-full">
                                             <FormLabel className="text-xs font-bold uppercase tracking-widest text-gray-500">Email Address</FormLabel>
                                             <FormControl>
-                                                <Input  {...field} className="bg-transparent border-b-2 border-gray-200 px-0 py-2 text-black focus:outline-none focus:border-purple-600 transition-colors rounded-none border-t-0 border-x-0 focus-visible:ring-0 placeholder:text-gray-300" placeholder="JANE@EXAMPLE.COM" />
+                                                <Input  {...field} className="uppercase bg-transparent border-b-2 border-gray-200 px-0 py-2 text-black focus:outline-none focus:border-purple-600 transition-colors rounded-none border-t-0 border-x-0 focus-visible:ring-0 placeholder:text-gray-300" placeholder="JANE@EXAMPLE.COM" />
                                             </FormControl>
                                             <FormMessage />
                                         </FormItem>
