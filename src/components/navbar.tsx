@@ -15,7 +15,7 @@ export default function NavBar({ className }: { className?: string }) {
                     Cognitio
                 </Link>
                 <div className="flex items-center gap-8 text-sm font-medium text-black uppercase tracking-wider">
-                    <Link href="/programs/python" className="hover:text-purple-600 transition-colors">Programs</Link>
+                    <Link href="/programs" className="hover:text-purple-600 transition-colors">Programs</Link>
                     <Link href="/about" className="hover:text-purple-600 transition-colors">About</Link>
                     <Link href="/contact" className="hover:text-purple-600 transition-colors">Contact</Link>
                 </div>
