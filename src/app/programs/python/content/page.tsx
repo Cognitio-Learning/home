@@ -66,12 +66,7 @@ export default function Content() {
                         )
                     })
                 }
-                {/* Empty grid cells to complete the row if needed, or decorative cells */}
-                <div className="border-b border-r border-black p-8 bg-gray-50 flex items-center justify-center">
-                    <div className="w-full h-full border border-dashed border-gray-300 rounded-full flex items-center justify-center">
-                        <span className="font-bold text-gray-300 uppercase tracking-widest">Coming Soon</span>
-                    </div>
-                </div>
+                
             </div>
             
         </main>
